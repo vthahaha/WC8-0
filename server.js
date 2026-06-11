@@ -89,8 +89,8 @@ function simulateGoals(expectedGoals) {
 // Every 10-point advantage adds 0.35 expected goals.
 function expectedGoals(teamRating, opponentRating) {
   const diff = teamRating - opponentRating;
-  const lambda = 1.4 + (diff * 0.035);
-  return Math.max(0.2, lambda);
+  const lambda = 1.4 + (diff * 0.065);
+  return Math.max(0.1, lambda);
 }
 
 async function getTeamPlayers(teamId) {
@@ -259,11 +259,19 @@ app.post('/api/simulate', async (req, res) => {
       // Representing home advantage / tournament pressure / momentum (max +5 rating equivalent)
       const stagePressureBuff = i < 3 ? 0 : (i - 2) * 1.5;
 
-      const userExpected = expectedGoals(userRating + 3, oppRating + stagePressureBuff);
-      const oppExpected  = expectedGoals(oppRating + stagePressureBuff, userRating + 3);
+      const userExpected = expectedGoals(userRating + 5, oppRating + stagePressureBuff);
+      const oppExpected  = expectedGoals(oppRating + stagePressureBuff, userRating + 5);
 
       let userGoals = simulateGoals(userExpected);
       let oppGoals  = simulateGoals(oppExpected);
+
+      // Clamp opponent goals when user has a clear rating advantage
+      const effectiveDiff = (userRating + 5) - (oppRating + stagePressureBuff);
+      if (effectiveDiff >= 15) {
+        oppGoals = Math.min(oppGoals, 0); // Guaranteed clean sheet
+      } else if (effectiveDiff >= 8) {
+        oppGoals = Math.min(oppGoals, 1); // Max 1 goal conceded
+      }
 
       let won  = userGoals > oppGoals;
       let drew = userGoals === oppGoals;
