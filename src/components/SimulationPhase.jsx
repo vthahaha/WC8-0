@@ -132,68 +132,62 @@ export default function SimulationPhase() {
         ) : (
           <div className="matches-list">
             {matches.slice(0, revealedCount).map((match, idx) => (
-              <div key={idx} className="match-card animate-fade-in" style={{ flexDirection: 'column', alignItems: 'stretch' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                  <div style={{ flex: 1 }}>
-                    <div style={{ fontSize: '0.8rem', color: 'var(--primary)', marginBottom: '0.2rem' }}>{match.stage}</div>
-                    <div className="match-team" style={{ color: 'var(--primary)' }}>
-                      Your Squad <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>({match.userRating})</span>
+              <div key={idx} className="match-card simulated animate-fade-in">
+                <div className="match-stage">{match.stage}</div>
+                <div className="match-result-col">
+                  <span className={`match-result result-${match.result}`}>{match.result}</span>
+                </div>
+                
+                <div className="match-main-row">
+                  <div className="match-team-col left">
+                    <div className="match-team user">
+                      Your Squad <span className="match-rating">({match.userRating})</span>
                     </div>
                   </div>
 
-                  <div className="match-score" style={{ flexDirection: 'column' }}>
-                    <div style={{ display: 'flex', gap: '1rem' }}>
+                  <div className="match-score-col">
+                    <div className="match-score-display">
                       <span>{match.userGoals}</span>
-                      <span style={{ color: 'var(--text-muted)', fontSize: '1rem' }}>-</span>
+                      <span className="match-score-dash">-</span>
                       <span>{match.oppGoals}</span>
                     </div>
                     {match.penalties && (
-                      <div style={{ fontSize: '0.9rem', color: 'var(--tier-icon)', fontWeight: '600' }}>
+                      <div className="match-penalties">
                         ({match.penalties.user} - {match.penalties.opp} Pens)
                       </div>
                     )}
                   </div>
 
-                  <div className="match-team right" style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'flex-end', gap: '0.5rem' }}>
-                    <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>({match.oppRating})</span>
-                    {match.opponent}
-                    <img src={getFlagUrl(match.opponent)} alt="Flag" style={{ width: '20px', borderRadius: '2px' }} />
-                  </div>
-
-                  <div style={{ marginLeft: '2rem', width: '50px', textAlign: 'center' }}>
-                    <span className={`match-result result-${match.result}`}>{match.result}</span>
+                  <div className="match-team-col right">
+                    <div className="match-team opp">
+                      <span className="match-rating">({match.oppRating})</span>
+                      <span className="match-team-name">{match.opponent}</span>
+                      <img src={getFlagUrl(match.opponent)} alt="Flag" className="match-flag" />
+                    </div>
                   </div>
                 </div>
 
                 {/* Scorers Details */}
                 {(match.userScorers?.length > 0 || match.oppScorers?.length > 0) && (
-                  <div className="match-scorers-details" style={{ 
-                    display: 'flex', 
-                    justifyContent: 'space-between', 
-                    marginTop: '1rem', 
-                    paddingTop: '0.8rem', 
-                    borderTop: '1px solid rgba(255,255,255,0.05)',
-                    fontSize: '0.85rem',
-                    color: 'var(--text-muted)'
-                  }}>
-                    <div style={{ textAlign: 'left', flex: 1, paddingRight: '1rem' }}>
+                  <div className="match-scorers-details">
+                    <div className="scorers-left">
                       {match.userScorers?.map((scorer, sIdx) => (
-                        <div key={sIdx} style={{ display: 'flex', alignItems: 'center', gap: '0.3rem', marginBottom: '0.2rem', flexWrap: 'wrap' }}>
+                        <div key={sIdx} className="scorer-item">
                           <span>⚽</span>
                           <span>{scorer.name} ({scorer.minute}')</span>
                           {scorer.assist && (
-                            <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', marginLeft: '0.3rem' }}>
+                            <span className="assist-info">
                               (assist: {scorer.assist})
                             </span>
                           )}
                         </div>
                       ))}
                     </div>
-                    <div style={{ textAlign: 'right', flex: 1, paddingLeft: '1rem', display: 'flex', flexDirection: 'column', alignItems: 'flex-end' }}>
+                    <div className="scorers-right">
                       {match.oppScorers?.map((scorer, sIdx) => (
-                        <div key={sIdx} style={{ display: 'flex', alignItems: 'center', gap: '0.3rem', marginBottom: '0.2rem', justifyContent: 'flex-end', flexWrap: 'wrap' }}>
+                        <div key={sIdx} className="scorer-item">
                           {scorer.assist && (
-                            <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', marginRight: '0.3rem' }}>
+                            <span className="assist-info">
                               (assist: {scorer.assist})
                             </span>
                           )}
@@ -211,38 +205,41 @@ export default function SimulationPhase() {
               (() => {
                 const upcomingMatch = matches[revealedCount];
                 return (
-                  <div className="match-card animate-fade-in" style={{ border: '1px dashed var(--primary)', background: 'rgba(88, 166, 255, 0.05)', padding: '1.5rem' }}>
-                    <div style={{ flex: 1 }}>
-                      <div style={{ fontSize: '0.8rem', color: 'var(--primary)', marginBottom: '0.2rem' }}>{upcomingMatch.stage}</div>
-                      <div className="match-team" style={{ color: 'var(--primary)' }}>
-                        Your Squad <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>({upcomingMatch.userRating})</span>
-                      </div>
+                  <div className="match-card upcoming animate-fade-in">
+                    <div className="match-stage">{upcomingMatch.stage}</div>
+                    <div className="match-result-col">
+                      <span className="match-result vs-badge">VS</span>
                     </div>
                     
-                    <div style={{ flex: 1.5, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                      {isMatchSimulating ? (
-                        <div className="animate-pulse" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--primary)', fontWeight: 'bold' }}>
-                          <span className="bouncing-ball">⚽</span> Playing Match...
+                    <div className="match-main-row">
+                      <div className="match-team-col left">
+                        <div className="match-team user">
+                          Your Squad <span className="match-rating">({upcomingMatch.userRating})</span>
                         </div>
-                      ) : (
-                        <button 
-                          className="draft-btn" 
-                          onClick={handleSimulateNext}
-                          style={{ padding: '0.5rem 1.5rem', fontSize: '1rem', background: 'var(--primary)', color: '#0d1117', margin: 0 }}
-                        >
-                          Kick Off
-                        </button>
-                      )}
-                    </div>
-                    
-                    <div className="match-team right" style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'flex-end', gap: '0.5rem' }}>
-                      <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>({upcomingMatch.oppRating})</span> 
-                      {upcomingMatch.opponent}
-                      <img src={getFlagUrl(upcomingMatch.opponent)} alt="Flag" style={{ width: '20px', borderRadius: '2px' }} />
-                    </div>
-                    
-                    <div style={{ marginLeft: '2rem', width: '50px', textAlign: 'center' }}>
-                      <span className="match-result" style={{ background: 'rgba(255,255,255,0.05)', color: 'var(--text-muted)', border: '1px solid rgba(255,255,255,0.1)', padding: '0.2rem 0.8rem', borderRadius: '6px' }}>VS</span>
+                      </div>
+                      
+                      <div className="match-action-col">
+                        {isMatchSimulating ? (
+                          <div className="animate-pulse match-playing">
+                            <span className="bouncing-ball">⚽</span> Playing Match...
+                          </div>
+                        ) : (
+                          <button 
+                            className="draft-btn kick-off-btn" 
+                            onClick={handleSimulateNext}
+                          >
+                            Kick Off
+                          </button>
+                        )}
+                      </div>
+                      
+                      <div className="match-team-col right">
+                        <div className="match-team opp">
+                          <span className="match-rating">({upcomingMatch.oppRating})</span>
+                          <span className="match-team-name">{upcomingMatch.opponent}</span>
+                          <img src={getFlagUrl(upcomingMatch.opponent)} alt="Flag" className="match-flag" />
+                        </div>
+                      </div>
                     </div>
                   </div>
                 );
