@@ -184,8 +184,9 @@ export default function DraftPhase() {
   }, [filteredPlayers]);
 
   return (
-    <div className="draft-container">
-      <div className="glass-panel">
+    <div className="draft-layout-grid">
+      <div className="draft-container">
+        <div className="glass-panel">
         <div className="draft-header">
           <h2>Draft Phase</h2>
           <div className="round-indicator">Round {round} / 11</div>
@@ -279,8 +280,10 @@ export default function DraftPhase() {
           </>
         )}
       </div>
+      </div>
 
-      <div className="squad-builder pitch-bg">
+      <div className="draft-pitch-container">
+        <div className="squad-builder pitch-bg">
         <h3 style={{ textAlign: 'center', marginBottom: '1rem', position: 'relative', zIndex: 2 }}>
           Your Starting XI ({formation.name})
         </h3>
@@ -306,6 +309,8 @@ export default function DraftPhase() {
             );
           });
         })()}
+        <p>Drag slots coming soon...</p>
+        </div>
       </div>
     </div>
   );

@@ -21,7 +21,7 @@ export default function SetupPhase() {
     <div className="glass-panel" style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'left' }}>
       <h2 style={{ marginBottom: '2rem', textAlign: 'center' }}>Draft Setup</h2>
       
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem', marginBottom: '2rem' }}>
+      <div className="setup-grid">
         <div className="filter-group">
           <label>Formation</label>
           <select className="filter-input" value={selectedFormation ? selectedFormation.name : ''} onChange={(e) => setSelectedFormation(FORMATIONS[e.target.value])}>

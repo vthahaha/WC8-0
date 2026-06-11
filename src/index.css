@@ -66,6 +66,13 @@ body {
   box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
+.setup-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
 /* Formation Selector */
 .formation-card {
   background: rgba(13, 17, 23, 0.8);
@@ -141,6 +148,18 @@ body {
 }
 
 /* Drafting Phase Styles */
+.draft-layout-grid {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 2rem;
+  align-items: start;
+}
+
+.draft-pitch-container {
+  position: sticky;
+  top: 2rem;
+}
+
 .draft-container {
   display: flex;
   flex-direction: column;
@@ -183,17 +202,34 @@ body {
 }
 
 .players-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  display: flex;
+  overflow-x: auto;
   gap: 1rem;
+  padding-bottom: 1rem;
+  scroll-snap-type: x mandatory;
+}
+
+.players-grid::-webkit-scrollbar {
+  height: 8px;
+}
+.players-grid::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.2);
+  border-radius: 4px;
+}
+.players-grid::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
 }
 
 /* Sleek Minimalist Player Card */
 .player-card {
+  flex: 0 0 auto;
+  width: 160px;
+  scroll-snap-align: start;
   background: rgba(13, 17, 23, 0.9);
   border: 1px solid var(--panel-border);
   border-radius: 12px;
-  padding: 1.2rem;
+  padding: 0.8rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -238,11 +274,11 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .card-rating {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: 800;
   color: #fff;
 }
@@ -484,6 +520,53 @@ body {
 
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 @keyframes fadeInDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 900px) {
+  .draft-layout-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .draft-pitch-container {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .app-container {
+    padding: 1rem;
+  }
+  
+  .glass-panel {
+    padding: 1.5rem;
+  }
+  
+  .filter-bar {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .header h1 {
+    font-size: 2rem;
+  }
+  
+  .team-display h3 {
+    font-size: 1.5rem;
+  }
+  
+  .player-card {
+    width: 140px;
+    padding: 0.6rem;
+  }
+  
+  .card-rating {
+    font-size: 1.2rem;
+  }
+  
+  .setup-grid {
+    grid-template-columns: 1fr;
+  }
+}
 
 .filter-group { display: flex; flex-direction: column; gap: 0.5rem; }
 .filter-input { padding: 0.8rem; border-radius: 8px; border: 1px solid var(--glass-border); background: rgba(0, 0, 0, 0.2); color: white; font-size: 1rem; }

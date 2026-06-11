@@ -54,6 +54,21 @@ export default function SimulationPhase() {
             <div style={{ fontSize: '3rem', fontWeight: 'bold' }}>{userRating}</div>
           </div>
         </div>
+
+        <div className="simulation-squad-display" style={{ marginTop: '2rem', textAlign: 'left' }}>
+          <h4 style={{ color: 'var(--text-muted)', marginBottom: '1rem' }}>Starting XI:</h4>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '0.5rem' }}>
+            {squad.map((p, i) => (
+              <div key={i} style={{ background: 'rgba(0,0,0,0.3)', padding: '0.5rem 1rem', borderRadius: '8px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                 <div>
+                    <div style={{ fontSize: '0.8rem', color: 'var(--primary)' }}>{p.position}</div>
+                    <div style={{ fontWeight: '600' }}>{p.name}</div>
+                 </div>
+                 <div style={{ fontSize: '1.2rem', fontWeight: 'bold', color: '#fff' }}>{p.rating}</div>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
 
       <div className="glass-panel">
