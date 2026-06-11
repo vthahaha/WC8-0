@@ -9,8 +9,8 @@ const WILDCARD_MAPPINGS = {
 };
 
 const LENIENT_MAPPINGS = {
-  'RW': ['RM', 'LW'],
-  'LW': ['LM', 'RW'],
+  'RW': ['LW', 'LM', 'RM'],
+  'LW': ['RW', 'LM', 'RM'],
   'RM': ['LM', 'LW', 'RW', 'RB'],
   'LM': ['RM', 'LW', 'RW', 'LB'],
   'RB': ['RM', 'LB'],
