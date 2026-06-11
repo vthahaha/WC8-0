@@ -4,7 +4,7 @@ import { User, Shield, Target, Activity, RotateCcw } from 'lucide-react';
 import { getFlagUrl } from '../utils/flags';
 import { useLocation, useNavigate } from 'react-router-dom';
 
-const API_URL = 'https://wc8-0.onrender.com/';
+const API_URL = 'https://wc8-0.onrender.com/api';
 
 const positionIcons = {
   'GK': <Shield size={14} />,

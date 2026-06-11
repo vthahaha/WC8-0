@@ -4,7 +4,7 @@ import { Trophy, XCircle, RotateCcw, AlertTriangle } from 'lucide-react';
 import { getFlagUrl } from '../utils/flags';
 import { useLocation, useNavigate } from 'react-router-dom';
 
-const API_URL = 'https://wc8-0.onrender.com/';
+const API_URL = 'https://wc8-0.onrender.com/api';
 
 export default function SimulationPhase() {
   const location = useLocation();
