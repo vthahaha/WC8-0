@@ -28,7 +28,9 @@ const LENIENT_MAPPINGS = {
   'RB': ['RM', 'LB'],
   'LB': ['LM', 'RB'],
   'CDM': ['CM'],
-  'CAM': ['CM']
+  'CAM': ['CM'],
+  'CM': ['CAM', 'CDM'],
+  'CF': ['ST']
 };
 
 const getEligibleSlots = (advancedPosStr) => {

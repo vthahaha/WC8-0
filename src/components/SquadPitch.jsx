@@ -2,6 +2,25 @@ import React from 'react';
 import { User } from 'lucide-react';
 import { getFlagUrl } from '../utils/flags';
 
+const WILDCARD_MAPPINGS = {
+  'DEF': ['CB', 'LB', 'RB', 'LWB', 'RWB', 'SW'],
+  'MID': ['CDM', 'CM', 'CAM', 'LM', 'RM'],
+  'FWD': ['LW', 'RW', 'SS', 'ST', 'CF', 'LF', 'RF']
+};
+
+const LENIENT_MAPPINGS = {
+  'RW': ['RM', 'LW'],
+  'LW': ['LM', 'RW'],
+  'RM': ['LM'],
+  'LM': ['RM'],
+  'RB': ['RM', 'LB'],
+  'LB': ['LM', 'RB'],
+  'CDM': ['CM'],
+  'CAM': ['CM'],
+  'CM': ['CAM', 'CDM'],
+  'CF': ['ST']
+};
+
 export default function SquadPitch({ squad, formation, settings, selectedPlayer, onSlotSelect }) {
   if (!formation) return null;
 
@@ -13,13 +32,20 @@ export default function SquadPitch({ squad, formation, settings, selectedPlayer,
     return 'tier-silver';
   };
 
-  const getEligibleSlots = (pos) => {
-    const mainPos = pos.split(',')[0].trim();
-    if (['ST', 'CF', 'RW', 'LW'].includes(mainPos)) return ['ST', 'LW', 'RW', 'CF'];
-    if (['CM', 'CDM', 'CAM', 'RM', 'LM'].includes(mainPos)) return ['CM', 'CDM', 'CAM', 'RM', 'LM'];
-    if (['CB', 'RB', 'LB', 'RWB', 'LWB'].includes(mainPos)) return ['CB', 'RB', 'LB', 'RWB', 'LWB'];
-    if (mainPos === 'GK') return ['GK'];
-    return [];
+  const getEligibleSlots = (advancedPosStr) => {
+    if (!advancedPosStr) return [];
+    const parts = advancedPosStr.split(',').map(p => p.trim());
+    const eligible = new Set();
+    parts.forEach(p => {
+      eligible.add(p);
+      if (WILDCARD_MAPPINGS[p]) {
+        WILDCARD_MAPPINGS[p].forEach(wildcardPos => eligible.add(wildcardPos));
+      }
+      if (LENIENT_MAPPINGS[p]) {
+        LENIENT_MAPPINGS[p].forEach(lenientPos => eligible.add(lenientPos));
+      }
+    });
+    return Array.from(eligible);
   };
 
   const renderSlot = (idx, posLabel) => {
@@ -48,7 +74,7 @@ export default function SquadPitch({ squad, formation, settings, selectedPlayer,
         key={idx} 
         className={`slot ${slotStatusClass}`}
         onClick={handleClick}
-        style={{ cursor: onSlotSelect && (!player && selectedPlayer && selectedPlayer.position === posLabel) ? 'pointer' : 'default' }}
+        style={{ cursor: onSlotSelect && (!player && selectedPlayer && slotStatusClass === 'allowed') ? 'pointer' : 'default' }}
       >
         {player ? (
           <>
