@@ -67,20 +67,30 @@ async function getTeamRating(teamId) {
   return Math.round(avg);
 }
 
-// Helper: simulate goals using a rating differential model.
-// expectedGoals feeds into a Poisson-like approximation with gaussian noise.
+// Helper: Poisson random variable generator using Knuth's algorithm
+function poissonRandom(lambda) {
+  let L = Math.exp(-lambda);
+  let k = 0;
+  let p = 1.0;
+  do {
+    k++;
+    p *= Math.random();
+  } while (p > L);
+  return k - 1;
+}
+
+// Helper: simulate goals using Poisson distribution
 function simulateGoals(expectedGoals) {
-  // Approximate gaussian noise (Box-Muller-lite: sum of 4 uniforms → mean 0, std ~0.82)
-  const noise = (Math.random() + Math.random() + Math.random() + Math.random() - 2) * 0.9;
-  return Math.max(0, Math.round(expectedGoals + noise));
+  return poissonRandom(expectedGoals);
 }
 
 // Helper: compute expected goals from a rating differential.
-// Base is 1.5 goals per team at equal ratings.
-// Every 10-point advantage adds ~0.5 expected goals and removes ~0.5 from the opponent.
+// Base is 1.4 goals per team at equal ratings.
+// Every 10-point advantage adds 0.35 expected goals.
 function expectedGoals(teamRating, opponentRating) {
   const diff = teamRating - opponentRating;
-  return 1.5 + (diff / 20);
+  const lambda = 1.4 + (diff * 0.035);
+  return Math.max(0.2, lambda);
 }
 
 async function getTeamPlayers(teamId) {
@@ -94,12 +104,11 @@ async function getTeamPlayers(teamId) {
 function simulateGoalscorers(players, numGoals) {
   if (numGoals <= 0) return [];
   
-  // Assign weights based on position
-  const weightedPlayers = players.map(p => {
+  // Assign goalscoring weights based on position
+  const weightedGoalscorers = players.map(p => {
     let weight = 1.0;
     const pos = p.position.toUpperCase();
     
-    // Check FWD positions
     if (pos.includes('ST') || pos.includes('CF') || pos.includes('LW') || pos.includes('RW') || pos.includes('FWD') || pos.includes('SS')) {
       weight = 10.0;
     } else if (pos.includes('CAM')) {
@@ -113,37 +122,76 @@ function simulateGoalscorers(players, numGoals) {
     } else if (pos.includes('GK')) {
       weight = 0.01;
     }
-    
-    // Boost for higher ratings
     weight *= (p.rating / 70);
-    
-    return { name: p.name, weight };
+    return { name: p.name, rating: p.rating, position: p.position, goalWeight: weight };
   });
 
-  const totalWeight = weightedPlayers.reduce((sum, wp) => sum + wp.weight, 0);
-  if (totalWeight <= 0) {
-    return Array.from({ length: numGoals }, () => ({
-      name: players[Math.floor(Math.random() * players.length)]?.name || "Unknown Player",
-      minute: Math.floor(Math.random() * 90) + 1
-    }));
-  }
+  const totalGoalWeight = weightedGoalscorers.reduce((sum, wp) => sum + wp.goalWeight, 0);
+
+  // Assign assist weights based on position
+  const weightedAssistors = players.map(p => {
+    let weight = 1.0;
+    const pos = p.position.toUpperCase();
+    
+    if (pos.includes('CAM') || pos.includes('LM') || pos.includes('RM') || pos.includes('CM') || pos.includes('MID')) {
+      weight = 10.0;
+    } else if (pos.includes('LW') || pos.includes('RW') || pos.includes('ST') || pos.includes('CF') || pos.includes('FWD') || pos.includes('SS')) {
+      weight = 5.0;
+    } else if (pos.includes('LWB') || pos.includes('RWB') || pos.includes('LB') || pos.includes('RB')) {
+      weight = 3.0;
+    } else if (pos.includes('CB') || pos.includes('CDM') || pos.includes('DEF')) {
+      weight = 1.0;
+    } else if (pos.includes('GK')) {
+      weight = 0.2;
+    }
+    weight *= (p.rating / 70);
+    return { name: p.name, rating: p.rating, position: p.position, assistWeight: weight };
+  });
 
   const scorers = [];
   for (let i = 0; i < numGoals; i++) {
-    let r = Math.random() * totalWeight;
-    let selectedPlayer = weightedPlayers[0];
-    for (const wp of weightedPlayers) {
-      r -= wp.weight;
-      if (r <= 0) {
-        selectedPlayer = wp;
-        break;
+    // 1. Pick scorer
+    let scorer = null;
+    if (totalGoalWeight <= 0) {
+      scorer = players[Math.floor(Math.random() * players.length)];
+    } else {
+      let r = Math.random() * totalGoalWeight;
+      for (const wp of weightedGoalscorers) {
+        r -= wp.goalWeight;
+        if (r <= 0) {
+          scorer = wp;
+          break;
+        }
       }
     }
-    
+    if (!scorer) scorer = players[0];
+
+    // 2. Pick assist (approx. 70% chance of assist)
+    let assist = null;
+    if (Math.random() < 0.70 && players.length > 1) {
+      // Exclude scorer from assist candidates
+      const assistCandidates = weightedAssistors.filter(p => p.name !== scorer.name);
+      const totalAssistWeight = assistCandidates.reduce((sum, wp) => sum + wp.assistWeight, 0);
+      
+      if (totalAssistWeight <= 0) {
+        assist = assistCandidates[Math.floor(Math.random() * assistCandidates.length)];
+      } else {
+        let r = Math.random() * totalAssistWeight;
+        for (const wp of assistCandidates) {
+          r -= wp.assistWeight;
+          if (r <= 0) {
+            assist = wp;
+            break;
+          }
+        }
+      }
+    }
+
     const minute = Math.floor(Math.random() * 90) + 1;
     scorers.push({
-      name: selectedPlayer.name,
-      minute
+      name: scorer.name,
+      minute,
+      assist: assist ? assist.name : null
     });
   }
 
