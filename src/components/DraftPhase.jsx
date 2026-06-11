@@ -5,7 +5,9 @@ import SquadPitch from './SquadPitch';
 import { getFlagUrl } from '../utils/flags';
 import { useLocation, useNavigate } from 'react-router-dom';
 
-const API_URL = 'https://wc8-0.onrender.com/api';
+const API_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+  ? 'http://localhost:5000/api'
+  : 'https://wc8-0.onrender.com/api';
 
 const positionIcons = {
   'GK': <Shield size={14} />,

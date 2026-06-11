@@ -5,7 +5,9 @@ import { getFlagUrl } from '../utils/flags';
 import { useLocation, useNavigate } from 'react-router-dom';
 import SquadPitch from './SquadPitch';
 
-const API_URL = 'https://wc8-0.onrender.com/api';
+const API_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+  ? 'http://localhost:5000/api'
+  : 'https://wc8-0.onrender.com/api';
 
 export default function SimulationPhase() {
   const location = useLocation();
@@ -43,6 +45,47 @@ export default function SimulationPhase() {
   if (!squad) return null;
 
   const userRating = Math.floor(squad.reduce((sum, p) => sum + p.rating, 0) / 11);
+
+  const stats = (() => {
+    const goals = {};
+    const assists = {};
+
+    matches.forEach(m => {
+      m.userScorers?.forEach(s => {
+        goals[s.name] = (goals[s.name] || 0) + 1;
+        if (s.assist) {
+          assists[s.assist] = (assists[s.assist] || 0) + 1;
+        }
+      });
+    });
+
+    let maxGoals = 0;
+    let topScorersList = [];
+    Object.entries(goals).forEach(([name, count]) => {
+      if (count > maxGoals) {
+        maxGoals = count;
+        topScorersList = [name];
+      } else if (count === maxGoals) {
+        topScorersList.push(name);
+      }
+    });
+
+    let maxAssists = 0;
+    let topAssistorsList = [];
+    Object.entries(assists).forEach(([name, count]) => {
+      if (count > maxAssists) {
+        maxAssists = count;
+        topAssistorsList = [name];
+      } else if (count === maxAssists) {
+        topAssistorsList.push(name);
+      }
+    });
+
+    return {
+      topScorers: maxGoals > 0 ? `${topScorersList.join(', ')} (${maxGoals} goal${maxGoals > 1 ? 's' : ''})` : 'None',
+      topAssistors: maxAssists > 0 ? `${topAssistorsList.join(', ')} (${maxAssists} assist${maxAssists > 1 ? 's' : ''})` : 'None'
+    };
+  })();
 
   if (error) {
     return <div className="glass-panel" style={{ color: 'red', textAlign: 'center' }}>{error}</div>;
@@ -122,15 +165,25 @@ export default function SimulationPhase() {
                   }}>
                     <div style={{ textAlign: 'left', flex: 1, paddingRight: '1rem' }}>
                       {match.userScorers?.map((scorer, sIdx) => (
-                        <div key={sIdx} style={{ display: 'flex', alignItems: 'center', gap: '0.3rem', marginBottom: '0.2rem' }}>
+                        <div key={sIdx} style={{ display: 'flex', alignItems: 'center', gap: '0.3rem', marginBottom: '0.2rem', flexWrap: 'wrap' }}>
                           <span>⚽</span>
                           <span>{scorer.name} ({scorer.minute}')</span>
+                          {scorer.assist && (
+                            <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', marginLeft: '0.3rem' }}>
+                              (assist: {scorer.assist})
+                            </span>
+                          )}
                         </div>
                       ))}
                     </div>
                     <div style={{ textAlign: 'right', flex: 1, paddingLeft: '1rem', display: 'flex', flexDirection: 'column', alignItems: 'flex-end' }}>
                       {match.oppScorers?.map((scorer, sIdx) => (
-                        <div key={sIdx} style={{ display: 'flex', alignItems: 'center', gap: '0.3rem', marginBottom: '0.2rem', justifyContent: 'flex-end' }}>
+                        <div key={sIdx} style={{ display: 'flex', alignItems: 'center', gap: '0.3rem', marginBottom: '0.2rem', justifyContent: 'flex-end', flexWrap: 'wrap' }}>
+                          {scorer.assist && (
+                            <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', marginRight: '0.3rem' }}>
+                              (assist: {scorer.assist})
+                            </span>
+                          )}
                           <span>{scorer.name} ({scorer.minute}')</span>
                           <span>⚽</span>
                         </div>
@@ -167,7 +220,36 @@ export default function SimulationPhase() {
                 )}
               </>
             )}
-            <br/><br/>
+
+            <div className="stats-summary" style={{ 
+              marginTop: '2rem', 
+              marginBottom: '1rem',
+              padding: '1rem', 
+              background: 'rgba(0,0,0,0.3)', 
+              border: '1px solid var(--panel-border)', 
+              borderRadius: '8px',
+              textAlign: 'left'
+            }}>
+              <h4 style={{ color: 'var(--primary)', marginBottom: '0.8rem', borderBottom: '1px solid rgba(88,166,255,0.1)', paddingBottom: '0.4rem', fontSize: '1rem' }}>
+                Squad Tournament Stats Summary
+              </h4>
+              <div style={{ display: 'flex', justifyContent: 'space-between', gap: '2rem', flexWrap: 'wrap' }}>
+                <div style={{ flex: 1, minWidth: '150px' }}>
+                  <span style={{ color: 'var(--text-muted)', fontSize: '0.8rem' }}>Top Scorer:</span>
+                  <div style={{ fontSize: '1rem', fontWeight: 'bold', marginTop: '0.2rem', color: '#fff' }}>
+                    ⚽ {stats.topScorers}
+                  </div>
+                </div>
+                <div style={{ flex: 1, minWidth: '150px' }}>
+                  <span style={{ color: 'var(--text-muted)', fontSize: '0.8rem' }}>Top Assistor:</span>
+                  <div style={{ fontSize: '1rem', fontWeight: 'bold', marginTop: '0.2rem', color: '#fff' }}>
+                    👟 {stats.topAssistors}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <br/>
             <button 
               className="draft-btn" 
               onClick={() => navigate('/')} 
