@@ -15,21 +15,21 @@ app.get('/api/draft/team', async (req, res) => {
     let params = [];
 
     if (country && country !== 'ALL') {
-       params.push(`${country} %`);
-       queryStr += ` AND name LIKE $${params.length}`;
+      params.push(`${country} %`);
+      queryStr += ` AND name LIKE $${params.length}`;
     }
 
     if (year && year !== 'ALL') {
-       params.push(`% ${year}`);
-       queryStr += ` AND name LIKE $${params.length}`;
+      params.push(`% ${year}`);
+      queryStr += ` AND name LIKE $${params.length}`;
     } else if (era && era !== 'ALL') {
-       if (era === 'PRE_1970') {
-          queryStr += ' AND CAST(RIGHT(name, 4) AS INTEGER) < 1970';
-       } else if (era === '1970_1998') {
-          queryStr += ' AND CAST(RIGHT(name, 4) AS INTEGER) BETWEEN 1970 AND 1998';
-       } else if (era === '2000_PLUS') {
-          queryStr += ' AND CAST(RIGHT(name, 4) AS INTEGER) >= 2000';
-       }
+      if (era === 'PRE_1970') {
+        queryStr += ' AND CAST(RIGHT(name, 4) AS INTEGER) < 1970';
+      } else if (era === '1970_1998') {
+        queryStr += ' AND CAST(RIGHT(name, 4) AS INTEGER) BETWEEN 1970 AND 1998';
+      } else if (era === '2000_PLUS') {
+        queryStr += ' AND CAST(RIGHT(name, 4) AS INTEGER) >= 2000';
+      }
     }
 
     queryStr += ' ORDER BY RANDOM() LIMIT 1';
@@ -37,20 +37,20 @@ app.get('/api/draft/team', async (req, res) => {
     // Get a random team
     const { rows: teams } = await pool.query(queryStr, params);
     if (teams.length === 0) return res.status(404).json({ error: "No teams found matching criteria" });
-    
+
     const team = teams[0];
-    
+
     // Get players for this team
     const { rows: players } = await pool.query('SELECT * FROM players WHERE team_id = $1', [team.id]);
-    
+
     res.json({
       team: team.name,
       players: players
     });
   } catch (err) {
     console.error(err);
-    res.status(500).json({ 
-      error: err.message, 
+    res.status(500).json({
+      error: err.message,
       databaseUrlStatus: process.env.DATABASE_URL ? "Configured" : "Missing"
     });
   }
@@ -89,8 +89,9 @@ function simulateGoals(expectedGoals) {
 // Every 10-point advantage adds 0.35 expected goals.
 function expectedGoals(teamRating, opponentRating) {
   const diff = teamRating - opponentRating;
-  const lambda = 1.4 + (diff * 0.065);
-  return Math.max(0.1, lambda);
+  // Increased multiplier from 0.065 to 0.085 to punish rating deficits harder
+  const lambda = 1.4 + (diff * 0.085);
+  return Math.max(0.01, lambda); // Lowered floor from 0.1 to 0.01
 }
 
 async function getTeamPlayers(teamId) {
@@ -103,12 +104,12 @@ async function getTeamPlayers(teamId) {
 
 function simulateGoalscorers(players, numGoals) {
   if (numGoals <= 0) return [];
-  
+
   // Assign goalscoring weights based on position
   const weightedGoalscorers = players.map(p => {
     let weight = 1.0;
     const pos = p.position.toUpperCase();
-    
+
     if (pos.includes('ST') || pos.includes('CF') || pos.includes('LW') || pos.includes('RW') || pos.includes('FWD') || pos.includes('SS')) {
       weight = 10.0;
     } else if (pos.includes('CAM')) {
@@ -132,7 +133,7 @@ function simulateGoalscorers(players, numGoals) {
   const weightedAssistors = players.map(p => {
     let weight = 1.0;
     const pos = p.position.toUpperCase();
-    
+
     if (pos.includes('CAM') || pos.includes('LM') || pos.includes('RM') || pos.includes('CM') || pos.includes('MID')) {
       weight = 10.0;
     } else if (pos.includes('LW') || pos.includes('RW') || pos.includes('ST') || pos.includes('CF') || pos.includes('FWD') || pos.includes('SS')) {
@@ -172,7 +173,7 @@ function simulateGoalscorers(players, numGoals) {
       // Exclude scorer from assist candidates
       const assistCandidates = weightedAssistors.filter(p => p.name !== scorer.name);
       const totalAssistWeight = assistCandidates.reduce((sum, wp) => sum + wp.assistWeight, 0);
-      
+
       if (totalAssistWeight <= 0) {
         assist = assistCandidates[Math.floor(Math.random() * assistCandidates.length)];
       } else {
@@ -203,7 +204,7 @@ function simulateGoalscorers(players, numGoals) {
 app.post('/api/simulate', async (req, res) => {
   try {
     const { draftedSquad } = req.body;
-    
+
     if (!draftedSquad || draftedSquad.length !== 11) {
       return res.status(400).json({ error: "Must provide a drafted squad of 11 players." });
     }
@@ -220,7 +221,7 @@ app.post('/api/simulate', async (req, res) => {
       // For stages 3+ (knockouts), pick the stronger of 2 candidates to simulate tougher opponents
       const poolSize = i < 3 ? 1 : 2;
       const candidates = allOpponents.slice(i * poolSize, i * poolSize + poolSize);
-      
+
       if (candidates.length === 0) break;
 
       if (candidates.length === 1) {
@@ -255,25 +256,48 @@ app.post('/api/simulate', async (req, res) => {
       // Get opponent rating from their actual players (cached if precomputed)
       const oppRating = oppTeam._precomputedRating ?? await getTeamRating(oppTeam.id);
 
-      // Progressive difficulty: later knockout stages get a small opponent buff
-      // Representing home advantage / tournament pressure / momentum (max +5 rating equivalent)
+      // ====== PASTE THIS NEW BLOCK ======
       const stagePressureBuff = i < 3 ? 0 : (i - 2) * 1.5;
 
-      const userExpected = expectedGoals(userRating + 5, oppRating + stagePressureBuff);
-      const oppExpected  = expectedGoals(oppRating + stagePressureBuff, userRating + 5);
+      // 1. Calculate raw real difference first
+      const realDiff = userRating - oppRating;
+
+      // 2. Apply a subtle user boost ONLY if the team is actually competitive
+      // This helps an 82-rated team fight an 85-rated team, but won't save a 55-rated team.
+      const userBoost = realDiff >= -5 ? 3 : 0;
+
+      const userExpected = expectedGoals(userRating + userBoost, oppRating + stagePressureBuff);
+      const oppExpected = expectedGoals(oppRating + stagePressureBuff, userRating + userBoost);
 
       let userGoals = simulateGoals(userExpected);
-      let oppGoals  = simulateGoals(oppExpected);
+      let oppGoals = simulateGoals(oppExpected);
 
-      // Clamp opponent goals when user has a clear rating advantage
-      const effectiveDiff = (userRating + 5) - (oppRating + stagePressureBuff);
-      if (effectiveDiff >= 15) {
-        oppGoals = Math.min(oppGoals, 0); // Guaranteed clean sheet
-      } else if (effectiveDiff >= 8) {
-        oppGoals = Math.min(oppGoals, 1); // Max 1 goal conceded
+      // 3. Two-Way Clamping: Handles both dominant wins and deserved blunders
+      if (realDiff >= 12) {
+        oppGoals = 0; // Clear user advantage -> Clean sheet
+      } else if (realDiff >= 6) {
+        oppGoals = Math.min(oppGoals, 1); // Comfortable user advantage -> Max 1 conceded
       }
 
-      let won  = userGoals > oppGoals;
+      if (realDiff <= -15) {
+        userGoals = 0; // Massive blunder -> User completely shut out
+        oppGoals = Math.max(oppGoals, 3); // Force opponent to score at least 3
+      } else if (realDiff <= -8) {
+        userGoals = Math.min(userGoals, 1); // Severe disadvantage -> Max 1 lucky goal
+        oppGoals = Math.max(oppGoals, 2); // Force opponent to score at least 2
+      }
+      // ==================================
+
+      // If opponent is significantly weaker, cap their maximum absolute goal capacity
+      if (userRating - oppRating > 10) {
+        oppGoals = Math.min(oppGoals, 1); // They simply cannot score more than 1
+      }
+      if (userRating - oppRating > 20) {
+        oppGoals = 0; // Total shutdown
+      }
+
+
+      let won = userGoals > oppGoals;
       let drew = userGoals === oppGoals;
       let lost = userGoals < oppGoals;
       let penalties = null;
@@ -283,7 +307,7 @@ app.post('/api/simulate', async (req, res) => {
       if (isGroupStage) {
         if (won) groupPoints += 3;
         if (drew) groupPoints += 1;
-        
+
         const oppPlayers = await getTeamPlayers(oppTeam.id);
         const userScorers = simulateGoalscorers(draftedSquad, userGoals);
         const oppScorers = simulateGoalscorers(oppPlayers, oppGoals);
@@ -319,8 +343,8 @@ app.post('/api/simulate', async (req, res) => {
           const ratingAdv = Math.min(Math.max((userRating - oppRating) / 30, -0.25), 0.25);
           const userWinsPens = Math.random() < (0.65 + ratingAdv);
           const userPenScore = userWinsPens ? Math.floor(Math.random() * 2) + 4 : Math.floor(Math.random() * 3) + 2;
-          const oppPenScore  = userWinsPens ? userPenScore - 1           : userPenScore + 1;
-          
+          const oppPenScore = userWinsPens ? userPenScore - 1 : userPenScore + 1;
+
           penalties = { user: userPenScore, opp: oppPenScore };
           won = userWinsPens;
           lost = !userWinsPens;
@@ -355,8 +379,8 @@ app.post('/api/simulate', async (req, res) => {
 
   } catch (err) {
     console.error(err);
-    res.status(500).json({ 
-      error: err.message, 
+    res.status(500).json({
+      error: err.message,
       databaseUrlStatus: process.env.DATABASE_URL ? "Configured" : "Missing"
     });
   }
