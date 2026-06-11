@@ -129,36 +129,68 @@ export default function SimulationPhase() {
         ) : (
           <div className="matches-list">
             {matches.map((match, idx) => (
-              <div key={idx} className="match-card" style={{ animationDelay: `${idx * 0.2}s` }}>
-                <div style={{ flex: 1 }}>
-                  <div style={{ fontSize: '0.8rem', color: 'var(--primary)', marginBottom: '0.2rem' }}>{match.stage}</div>
-                  <div className="match-team" style={{ color: 'var(--primary)' }}>
-                    Your Squad <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>({match.userRating})</span>
-                  </div>
-                </div>
-                
-                <div className="match-score" style={{ flexDirection: 'column' }}>
-                  <div style={{ display: 'flex', gap: '1rem' }}>
-                    <span>{match.userGoals}</span>
-                    <span style={{ color: 'var(--text-muted)', fontSize: '1rem' }}>-</span>
-                    <span>{match.oppGoals}</span>
-                  </div>
-                  {match.penalties && (
-                    <div style={{ fontSize: '0.9rem', color: 'var(--tier-icon)', fontWeight: '600' }}>
-                      ({match.penalties.user} - {match.penalties.opp} Pens)
+              <div key={idx} className="match-card" style={{ animationDelay: `${idx * 0.2}s`, flexDirection: 'column', alignItems: 'stretch' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                  <div style={{ flex: 1 }}>
+                    <div style={{ fontSize: '0.8rem', color: 'var(--primary)', marginBottom: '0.2rem' }}>{match.stage}</div>
+                    <div className="match-team" style={{ color: 'var(--primary)' }}>
+                      Your Squad <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>({match.userRating})</span>
                     </div>
-                  )}
+                  </div>
+
+                  <div className="match-score" style={{ flexDirection: 'column' }}>
+                    <div style={{ display: 'flex', gap: '1rem' }}>
+                      <span>{match.userGoals}</span>
+                      <span style={{ color: 'var(--text-muted)', fontSize: '1rem' }}>-</span>
+                      <span>{match.oppGoals}</span>
+                    </div>
+                    {match.penalties && (
+                      <div style={{ fontSize: '0.9rem', color: 'var(--tier-icon)', fontWeight: '600' }}>
+                        ({match.penalties.user} - {match.penalties.opp} Pens)
+                      </div>
+                    )}
+                  </div>
+
+                  <div className="match-team right" style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'flex-end', gap: '0.5rem' }}>
+                    <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>({match.oppRating})</span>
+                    {match.opponent}
+                    <img src={getFlagUrl(match.opponent)} alt="Flag" style={{ width: '20px', borderRadius: '2px' }} />
+                  </div>
+
+                  <div style={{ marginLeft: '2rem', width: '50px', textAlign: 'center' }}>
+                    <span className={`match-result result-${match.result}`}>{match.result}</span>
+                  </div>
                 </div>
-                
-                <div className="match-team right" style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'flex-end', gap: '0.5rem' }}>
-                  <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>({match.oppRating})</span> 
-                  {match.opponent}
-                  <img src={getFlagUrl(match.opponent)} alt="Flag" style={{ width: '20px', borderRadius: '2px' }} />
-                </div>
-                
-                <div style={{ marginLeft: '2rem', width: '50px', textAlign: 'center' }}>
-                  <span className={`match-result result-${match.result}`}>{match.result}</span>
-                </div>
+
+                {/* Scorers Details */}
+                {(match.userScorers?.length > 0 || match.oppScorers?.length > 0) && (
+                  <div className="match-scorers-details" style={{ 
+                    display: 'flex', 
+                    justifyContent: 'space-between', 
+                    marginTop: '1rem', 
+                    paddingTop: '0.8rem', 
+                    borderTop: '1px solid rgba(255,255,255,0.05)',
+                    fontSize: '0.85rem',
+                    color: 'var(--text-muted)'
+                  }}>
+                    <div style={{ textAlign: 'left', flex: 1, paddingRight: '1rem' }}>
+                      {match.userScorers?.map((scorer, sIdx) => (
+                        <div key={sIdx} style={{ display: 'flex', alignItems: 'center', gap: '0.3rem', marginBottom: '0.2rem' }}>
+                          <span>⚽</span>
+                          <span>{scorer.name} ({scorer.minute}')</span>
+                        </div>
+                      ))}
+                    </div>
+                    <div style={{ textAlign: 'right', flex: 1, paddingLeft: '1rem', display: 'flex', flexDirection: 'column', alignItems: 'flex-end' }}>
+                      {match.oppScorers?.map((scorer, sIdx) => (
+                        <div key={sIdx} style={{ display: 'flex', alignItems: 'center', gap: '0.3rem', marginBottom: '0.2rem', justifyContent: 'flex-end' }}>
+                          <span>{scorer.name} ({scorer.minute}')</span>
+                          <span>⚽</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
             ))}
           </div>
