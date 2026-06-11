@@ -172,10 +172,10 @@ export default function DraftPhase() {
     return teamPlayers.filter(p => {
       const primaryGeneric = getPrimaryGenericPosition(p.position);
       if (filterPos !== 'ALL' && primaryGeneric !== filterPos) return false;
-      if (p.rating < filterOvr) return false;
+      if (!settings?.hardcoreMode && p.rating < filterOvr) return false;
       return true;
     });
-  }, [teamPlayers, filterPos, filterOvr]);
+  }, [teamPlayers, filterPos, filterOvr, settings]);
 
   const groupedPlayers = useMemo(() => {
     const groups = { FWD: [], MID: [], DEF: [], GK: [] };
@@ -248,16 +248,18 @@ export default function DraftPhase() {
                   <option value="GK">GK</option>
                 </select>
               </div>
-              <div className="filter-group">
-                <label>Min OVR:</label>
-                <select className="filter-input" value={filterOvr} onChange={(e) => setFilterOvr(Number(e.target.value))}>
-                  <option value="0">All</option>
-                  <option value="75">75+</option>
-                  <option value="80">80+</option>
-                  <option value="85">85+</option>
-                  <option value="90">90+</option>
-                </select>
-              </div>
+              {!settings?.hardcoreMode && (
+                <div className="filter-group">
+                  <label>Min OVR:</label>
+                  <select className="filter-input" value={filterOvr} onChange={(e) => setFilterOvr(Number(e.target.value))}>
+                    <option value="0">All</option>
+                    <option value="75">75+</option>
+                    <option value="80">80+</option>
+                    <option value="85">85+</option>
+                    <option value="90">90+</option>
+                  </select>
+                </div>
+              )}
             </div>
 
             {['FWD', 'MID', 'DEF', 'GK'].map(posGroup => {
