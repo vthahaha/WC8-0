@@ -542,6 +542,13 @@ body {
   
   .draft-pitch-container {
     position: static;
+    max-height: none;
+    overflow-y: visible;
+  }
+
+  .players-list {
+    max-height: none;
+    overflow-y: visible;
   }
 }
 
