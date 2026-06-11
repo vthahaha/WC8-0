@@ -1,5 +1,5 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
 import SetupPhase from './components/SetupPhase';
 import DraftPhase from './components/DraftPhase';
 import SimulationPhase from './components/SimulationPhase';
@@ -21,9 +21,25 @@ export const FORMATIONS = {
   '5-4-1': { name: '5-4-1', rows: [['ST'], ['LM', 'CM', 'CM', 'RM'], ['LWB', 'CB', 'CB', 'CB', 'RWB'], ['GK']] }
 };
 
+let isInitialLoad = true;
+
+function ReloadRedirect() {
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (isInitialLoad) {
+      isInitialLoad = false;
+      if (window.location.pathname !== '/') {
+        navigate('/');
+      }
+    }
+  }, [navigate]);
+  return null;
+}
+
 function App() {
   return (
     <Router>
+      <ReloadRedirect />
       <div className="app-container">
         <header className="header">
           <h1>World Cup 8-0</h1>

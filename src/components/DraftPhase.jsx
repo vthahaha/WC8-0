@@ -68,19 +68,6 @@ export default function DraftPhase() {
   const { formation, settings } = location.state || {};
   
   useEffect(() => {
-    const savedSession = localStorage.getItem('wc8_simulation_session');
-    if (savedSession) {
-      try {
-        const parsed = JSON.parse(savedSession);
-        if (parsed && parsed.squad) {
-          navigate('/simulate');
-          return;
-        }
-      } catch (e) {
-        console.error("Error checking simulation session on draft:", e);
-      }
-    }
-
     if (!formation) {
       navigate('/');
     }
