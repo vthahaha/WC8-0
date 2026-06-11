@@ -19,6 +19,18 @@ export default function SimulationPhase() {
   const [simResult, setSimResult] = useState(null);
   const [error, setError] = useState(null);
 
+  const [revealedCount, setRevealedCount] = useState(0);
+  const [isMatchSimulating, setIsMatchSimulating] = useState(false);
+
+  const handleSimulateNext = () => {
+    if (isMatchSimulating) return;
+    setIsMatchSimulating(true);
+    setTimeout(() => {
+      setIsMatchSimulating(false);
+      setRevealedCount(prev => prev + 1);
+    }, 1200);
+  };
+
   useEffect(() => {
     if (!squad) {
       navigate('/');
@@ -31,6 +43,7 @@ export default function SimulationPhase() {
         const response = await axios.post(`${API_URL}/simulate`, { draftedSquad: squad });
         setMatches(response.data.matches);
         setSimResult(response.data);
+        setRevealedCount(0);
       } catch (err) {
         console.error(err);
         setError("Simulation failed. Make sure backend is running.");
@@ -118,8 +131,8 @@ export default function SimulationPhase() {
           <div style={{ textAlign: 'center', padding: '2rem' }}>Simulating matches...</div>
         ) : (
           <div className="matches-list">
-            {matches.map((match, idx) => (
-              <div key={idx} className="match-card" style={{ animationDelay: `${idx * 0.2}s`, flexDirection: 'column', alignItems: 'stretch' }}>
+            {matches.slice(0, revealedCount).map((match, idx) => (
+              <div key={idx} className="match-card animate-fade-in" style={{ flexDirection: 'column', alignItems: 'stretch' }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                   <div style={{ flex: 1 }}>
                     <div style={{ fontSize: '0.8rem', color: 'var(--primary)', marginBottom: '0.2rem' }}>{match.stage}</div>
@@ -193,10 +206,52 @@ export default function SimulationPhase() {
                 )}
               </div>
             ))}
+
+            {revealedCount < matches.length && (
+              (() => {
+                const upcomingMatch = matches[revealedCount];
+                return (
+                  <div className="match-card animate-fade-in" style={{ border: '1px dashed var(--primary)', background: 'rgba(88, 166, 255, 0.05)', padding: '1.5rem' }}>
+                    <div style={{ flex: 1 }}>
+                      <div style={{ fontSize: '0.8rem', color: 'var(--primary)', marginBottom: '0.2rem' }}>{upcomingMatch.stage}</div>
+                      <div className="match-team" style={{ color: 'var(--primary)' }}>
+                        Your Squad <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>({upcomingMatch.userRating})</span>
+                      </div>
+                    </div>
+                    
+                    <div style={{ flex: 1.5, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                      {isMatchSimulating ? (
+                        <div className="animate-pulse" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--primary)', fontWeight: 'bold' }}>
+                          <span className="bouncing-ball">⚽</span> Playing Match...
+                        </div>
+                      ) : (
+                        <button 
+                          className="draft-btn" 
+                          onClick={handleSimulateNext}
+                          style={{ padding: '0.5rem 1.5rem', fontSize: '1rem', background: 'var(--primary)', color: '#0d1117', margin: 0 }}
+                        >
+                          Kick Off
+                        </button>
+                      )}
+                    </div>
+                    
+                    <div className="match-team right" style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'flex-end', gap: '0.5rem' }}>
+                      <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>({upcomingMatch.oppRating})</span> 
+                      {upcomingMatch.opponent}
+                      <img src={getFlagUrl(upcomingMatch.opponent)} alt="Flag" style={{ width: '20px', borderRadius: '2px' }} />
+                    </div>
+                    
+                    <div style={{ marginLeft: '2rem', width: '50px', textAlign: 'center' }}>
+                      <span className="match-result" style={{ background: 'rgba(255,255,255,0.05)', color: 'var(--text-muted)', border: '1px solid rgba(255,255,255,0.1)', padding: '0.2rem 0.8rem', borderRadius: '6px' }}>VS</span>
+                    </div>
+                  </div>
+                );
+              })()
+            )}
           </div>
         )}
 
-        {!isSimulating && simResult && (
+        {!isSimulating && simResult && revealedCount >= matches.length && (
           <div className={`result-banner ${simResult.isPerfect ? 'banner-success' : (simResult.wonCup ? 'banner-warning' : 'banner-failure')}`}>
             {simResult.isPerfect ? (
               <>
