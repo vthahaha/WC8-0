@@ -23,14 +23,16 @@ const WILDCARD_MAPPINGS = {
 const LENIENT_MAPPINGS = {
   'RW': ['RM', 'LW'],
   'LW': ['LM', 'RW'],
-  'RM': ['LM'],
-  'LM': ['RM'],
+  'RM': ['LM', 'LW', 'RW', 'RB'],
+  'LM': ['RM', 'LW', 'RW', 'LB'],
   'RB': ['RM', 'LB'],
   'LB': ['LM', 'RB'],
   'CDM': ['CM'],
   'CAM': ['CM'],
   'CM': ['CAM', 'CDM'],
-  'CF': ['ST']
+  'CF': ['ST'],
+  'LWB': ['LB', 'RB', 'LM', 'RM'],
+  'RWB': ['RB', 'LB', 'RM', 'LM']
 };
 
 const getEligibleSlots = (advancedPosStr) => {
