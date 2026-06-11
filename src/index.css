@@ -30,7 +30,7 @@ body {
 }
 
 .app-container {
-  max-width: 1200px;
+  max-width: 1600px;
   margin: 0 auto;
   padding: 2rem;
   display: flex;
@@ -150,7 +150,7 @@ body {
 /* Drafting Phase Styles */
 .draft-layout-grid {
   display: grid;
-  grid-template-columns: 1fr 400px;
+  grid-template-columns: minmax(0, 1fr) 750px;
   gap: 2rem;
   align-items: start;
 }
@@ -158,6 +158,19 @@ body {
 .draft-pitch-container {
   position: sticky;
   top: 2rem;
+  max-height: calc(100vh - 4rem);
+  overflow-y: auto;
+}
+
+.draft-pitch-container::-webkit-scrollbar {
+  width: 6px;
+}
+.draft-pitch-container::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.1);
+}
+.draft-pitch-container::-webkit-scrollbar-thumb {
+  background: var(--panel-border);
+  border-radius: 4px;
 }
 
 .draft-container {
@@ -201,37 +214,36 @@ body {
   font-weight: 800;
 }
 
-.players-grid {
+.players-list {
   display: flex;
-  overflow-x: auto;
-  gap: 1rem;
-  padding-bottom: 1rem;
-  scroll-snap-type: x mandatory;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 0.5rem;
 }
 
-.players-grid::-webkit-scrollbar {
-  height: 8px;
+.players-list::-webkit-scrollbar {
+  width: 6px;
 }
-.players-grid::-webkit-scrollbar-track {
+.players-list::-webkit-scrollbar-track {
   background: rgba(0,0,0,0.2);
   border-radius: 4px;
 }
-.players-grid::-webkit-scrollbar-thumb {
+.players-list::-webkit-scrollbar-thumb {
   background: rgba(255, 255, 255, 0.2);
   border-radius: 4px;
 }
 
-/* Sleek Minimalist Player Card */
-.player-card {
-  flex: 0 0 auto;
-  width: 160px;
-  scroll-snap-align: start;
+/* Sleek Minimalist Player List Item */
+.player-list-item {
+  width: 100%;
   background: rgba(13, 17, 23, 0.9);
   border: 1px solid var(--panel-border);
-  border-radius: 12px;
-  padding: 0.8rem;
+  border-radius: 8px;
+  padding: 0.8rem 1.2rem;
   display: flex;
-  flex-direction: column;
+  align-items: center;
   justify-content: space-between;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -239,36 +251,36 @@ body {
   overflow: hidden;
 }
 
-.player-card:hover {
-  transform: translateY(-4px);
+.player-list-item:hover {
+  transform: translateX(4px);
   background: rgba(22, 27, 34, 1);
   border-color: rgba(255,255,255,0.3);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
 }
 
-.player-card.selected {
+.player-list-item.selected {
   border-color: var(--primary);
   box-shadow: 0 0 0 2px var(--primary);
 }
 
-.player-card.disabled-card {
+.player-list-item.disabled-card {
   filter: grayscale(100%) blur(1px);
   opacity: 0.4;
   cursor: not-allowed;
   pointer-events: none;
 }
 
-/* Tier Accent Bars */
-.player-card::before {
+/* Tier Accent Bars (Left side) */
+.player-list-item::before {
   content: '';
   position: absolute;
-  top: 0; left: 0; width: 100%; height: 4px;
+  top: 0; left: 0; width: 4px; height: 100%;
 }
-.player-card.tier-icon::before { background: var(--tier-icon); }
-.player-card.tier-gold-rare::before { background: var(--tier-gold); }
-.player-card.tier-gold::before { background: var(--tier-gold); }
-.player-card.tier-silver-rare::before { background: var(--tier-silver); }
-.player-card.tier-silver::before { background: var(--tier-silver); }
+.player-list-item.tier-icon::before { background: var(--tier-icon); }
+.player-list-item.tier-gold-rare::before { background: var(--tier-gold); }
+.player-list-item.tier-gold::before { background: var(--tier-gold); }
+.player-list-item.tier-silver-rare::before { background: var(--tier-silver); }
+.player-list-item.tier-silver::before { background: var(--tier-silver); }
 
 .card-top {
   display: flex;
@@ -320,11 +332,12 @@ body {
 .pitch-bg {
   background: rgba(13, 17, 23, 0.5);
   padding-bottom: 2rem;
+  overflow-x: auto;
 }
 
 .formation-slots {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 1.5rem;
   justify-content: center;
   margin-bottom: 1.5rem;

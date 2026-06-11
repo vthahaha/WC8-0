@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import axios from 'axios';
-import { User, Shield, Target, Activity, RotateCcw } from 'lucide-react';
+import { User, Shield, Target, Activity, RotateCcw, ShieldAlert, Star } from 'lucide-react';
+import SquadPitch from './SquadPitch';
 import { getFlagUrl } from '../utils/flags';
 import { useLocation, useNavigate } from 'react-router-dom';
 
@@ -148,7 +149,7 @@ export default function DraftPhase() {
     if (round < 11) {
       setRound(round + 1);
     } else {
-      navigate('/simulate', { state: { squad: newSquad } });
+      navigate('/simulate', { state: { squad: newSquad, formation, settings } });
     }
   };
 
@@ -250,7 +251,7 @@ export default function DraftPhase() {
               return (
                 <div key={posGroup} className="pos-group">
                   <h4>{posGroup}s</h4>
-                  <div className="players-grid">
+                  <div className="players-list">
                     {groupedPlayers[posGroup].map(player => {
                       const eligible = getEligibleSlots(player.position);
                       const isFull = eligible.every(pos => isPositionFull(pos));
@@ -258,17 +259,19 @@ export default function DraftPhase() {
                       return (
                         <div 
                           key={player.id} 
-                          className={`player-card ${settings?.hardcoreMode ? 'tier-silver' : getCardTier(player.rating)} ${isSelected ? 'selected' : ''} ${isFull ? 'disabled-card' : ''}`}
+                          className={`player-list-item ${settings?.hardcoreMode ? 'tier-silver' : getCardTier(player.rating)} ${isSelected ? 'selected' : ''} ${isFull ? 'disabled-card' : ''}`}
                           onClick={() => handlePlayerSelect(player)}
                         >
-                          <div className="card-top">
-                            <div className="card-rating">{settings?.hardcoreMode ? '??' : player.rating}</div>
-                            <div className="card-pos">
-                              {positionIcons[getPrimaryGenericPosition(player.position)]} {player.position}
+                          <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
+                            <div className="card-rating" style={{ minWidth: '35px', textAlign: 'center' }}>
+                              {settings?.hardcoreMode ? '??' : player.rating}
+                            </div>
+                            <div className="card-name" style={{ fontSize: '1.2rem' }}>
+                              {player.name}
                             </div>
                           </div>
-                          <div className="card-bottom">
-                            <div className="card-name">{player.name}</div>
+                          <div className="card-pos" style={{ color: 'var(--text-muted)', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+                            {positionIcons[getPrimaryGenericPosition(player.position)]} {player.position}
                           </div>
                         </div>
                       );
@@ -283,78 +286,17 @@ export default function DraftPhase() {
       </div>
 
       <div className="draft-pitch-container">
-        <div className="squad-builder pitch-bg">
-        <h3 style={{ textAlign: 'center', marginBottom: '1rem', position: 'relative', zIndex: 2 }}>
-          Your Starting XI ({formation.name})
-        </h3>
-        {selectedPlayer && (
-           <p style={{ textAlign: 'center', color: 'var(--primary)', marginBottom: '1rem', position: 'relative', zIndex: 2 }}>
-             Now click an empty slot for {selectedPlayer.name} ({selectedPlayer.position})
-           </p>
-        )}
-        
-        {(() => {
-          let globalSlotIndex = 0;
-          return formation.rows.map((row, rowIdx) => {
-            const currentGlobalIndexStart = globalSlotIndex;
-            globalSlotIndex += row.length;
-            
-            return (
-              <div key={rowIdx} className="formation-slots">
-                {row.map((posLabel, idx) => {
-                  const actualSlotIndex = currentGlobalIndexStart + idx;
-                  return renderSlot(actualSlotIndex, posLabel);
-                })}
-              </div>
-            );
-          });
-        })()}
-        <p>Drag slots coming soon...</p>
+        <SquadPitch 
+          squad={squad} 
+          formation={formation} 
+          settings={settings} 
+          selectedPlayer={selectedPlayer} 
+          onSlotSelect={handleSlotSelect} 
+        />
+        <div style={{ textAlign: 'center', marginTop: '1rem' }}>
+          <p>Drag slots coming soon...</p>
         </div>
       </div>
     </div>
   );
-
-  function renderSlot(idx, posLabel) {
-    const player = squad[idx];
-    
-    let slotStatusClass = '';
-    if (player) {
-      slotStatusClass = 'filled ' + getCardTier(player.rating);
-    } else if (selectedPlayer) {
-      const eligible = getEligibleSlots(selectedPlayer.position);
-      if (eligible.includes(posLabel)) {
-        slotStatusClass = 'allowed';
-      } else {
-        slotStatusClass = 'disallowed';
-      }
-    }
-
-    return (
-      <div 
-        key={idx} 
-        className={`slot ${slotStatusClass}`}
-        onClick={() => handleSlotSelect(idx)}
-        style={{ cursor: (!player && selectedPlayer && selectedPlayer.position === posLabel) ? 'pointer' : 'default' }}
-      >
-        {player ? (
-          <>
-            <div className="slot-rating">{settings?.hardcoreMode ? '??' : player.rating}</div>
-            <img 
-               src={getFlagUrl(player.team_name)} 
-               alt="Flag" 
-               className="slot-flag"
-            />
-            <div className="slot-name">{player.name}</div>
-            <div className="slot-team">{player.team_name}</div>
-          </>
-        ) : (
-          <>
-            <div className="slot-pos-label">{posLabel}</div>
-            <User size={24} color={slotStatusClass === 'allowed' ? 'var(--primary)' : 'rgba(255,255,255,0.2)'} />
-          </>
-        )}
-      </div>
-    );
-  }
 }

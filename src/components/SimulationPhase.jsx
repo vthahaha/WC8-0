@@ -3,13 +3,14 @@ import axios from 'axios';
 import { Trophy, XCircle, RotateCcw, AlertTriangle } from 'lucide-react';
 import { getFlagUrl } from '../utils/flags';
 import { useLocation, useNavigate } from 'react-router-dom';
+import SquadPitch from './SquadPitch';
 
 const API_URL = 'https://wc8-0.onrender.com/api';
 
 export default function SimulationPhase() {
   const location = useLocation();
   const navigate = useNavigate();
-  const { squad } = location.state || {};
+  const { squad, formation, settings } = location.state || {};
 
   const [matches, setMatches] = useState([]);
   const [isSimulating, setIsSimulating] = useState(true);
@@ -55,19 +56,10 @@ export default function SimulationPhase() {
           </div>
         </div>
 
-        <div className="simulation-squad-display" style={{ marginTop: '2rem', textAlign: 'left' }}>
-          <h4 style={{ color: 'var(--text-muted)', marginBottom: '1rem' }}>Starting XI:</h4>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '0.5rem' }}>
-            {squad.map((p, i) => (
-              <div key={i} style={{ background: 'rgba(0,0,0,0.3)', padding: '0.5rem 1rem', borderRadius: '8px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                 <div>
-                    <div style={{ fontSize: '0.8rem', color: 'var(--primary)' }}>{p.position}</div>
-                    <div style={{ fontWeight: '600' }}>{p.name}</div>
-                 </div>
-                 <div style={{ fontSize: '1.2rem', fontWeight: 'bold', color: '#fff' }}>{p.rating}</div>
-              </div>
-            ))}
-          </div>
+        <div style={{ marginTop: '2rem' }}>
+          {formation && (
+            <SquadPitch squad={squad} formation={formation} settings={settings} />
+          )}
         </div>
       </div>
 
