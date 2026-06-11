@@ -183,12 +183,20 @@ export default function DraftPhase() {
       const primary = getPrimaryGenericPosition(p.position);
       if (groups[primary]) groups[primary].push(p);
     });
-    // Sort each group by rating descending
+    // Sort or randomize each group
     Object.keys(groups).forEach(key => {
-      groups[key].sort((a, b) => b.rating - a.rating);
+      if (settings?.hardcoreMode) {
+        // Standard Schwartzian transform shuffle for unbiased randomization
+        groups[key] = groups[key]
+          .map(value => ({ value, sort: Math.random() }))
+          .sort((a, b) => a.sort - b.sort)
+          .map(({ value }) => value);
+      } else {
+        groups[key].sort((a, b) => b.rating - a.rating);
+      }
     });
     return groups;
-  }, [filteredPlayers]);
+  }, [filteredPlayers, settings]);
 
   return (
     <div className="draft-layout-grid">

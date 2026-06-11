@@ -117,7 +117,7 @@ export default function SimulationPhase() {
 
         <div style={{ marginTop: '2rem' }}>
           {formation && (
-            <SquadPitch squad={squad} formation={formation} settings={settings} />
+            <SquadPitch squad={squad} formation={formation} settings={{ ...settings, hardcoreMode: false }} />
           )}
         </div>
       </div>
