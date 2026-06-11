@@ -83,6 +83,74 @@ function expectedGoals(teamRating, opponentRating) {
   return 1.5 + (diff / 20);
 }
 
+async function getTeamPlayers(teamId) {
+  const { rows } = await pool.query(
+    'SELECT name, position, rating FROM players WHERE team_id = $1',
+    [teamId]
+  );
+  return rows;
+}
+
+function simulateGoalscorers(players, numGoals) {
+  if (numGoals <= 0) return [];
+  
+  // Assign weights based on position
+  const weightedPlayers = players.map(p => {
+    let weight = 1.0;
+    const pos = p.position.toUpperCase();
+    
+    // Check FWD positions
+    if (pos.includes('ST') || pos.includes('CF') || pos.includes('LW') || pos.includes('RW') || pos.includes('FWD') || pos.includes('SS')) {
+      weight = 10.0;
+    } else if (pos.includes('CAM')) {
+      weight = 6.0;
+    } else if (pos.includes('CM') || pos.includes('LM') || pos.includes('RM') || pos.includes('MID')) {
+      weight = 4.0;
+    } else if (pos.includes('CDM')) {
+      weight = 1.5;
+    } else if (pos.includes('CB') || pos.includes('LB') || pos.includes('RB') || pos.includes('LWB') || pos.includes('RWB') || pos.includes('DEF')) {
+      weight = 0.5;
+    } else if (pos.includes('GK')) {
+      weight = 0.01;
+    }
+    
+    // Boost for higher ratings
+    weight *= (p.rating / 70);
+    
+    return { name: p.name, weight };
+  });
+
+  const totalWeight = weightedPlayers.reduce((sum, wp) => sum + wp.weight, 0);
+  if (totalWeight <= 0) {
+    return Array.from({ length: numGoals }, () => ({
+      name: players[Math.floor(Math.random() * players.length)]?.name || "Unknown Player",
+      minute: Math.floor(Math.random() * 90) + 1
+    }));
+  }
+
+  const scorers = [];
+  for (let i = 0; i < numGoals; i++) {
+    let r = Math.random() * totalWeight;
+    let selectedPlayer = weightedPlayers[0];
+    for (const wp of weightedPlayers) {
+      r -= wp.weight;
+      if (r <= 0) {
+        selectedPlayer = wp;
+        break;
+      }
+    }
+    
+    const minute = Math.floor(Math.random() * 90) + 1;
+    scorers.push({
+      name: selectedPlayer.name,
+      minute
+    });
+  }
+
+  scorers.sort((a, b) => a.minute - b.minute);
+  return scorers;
+}
+
 // Simulate the 8 matches
 app.post('/api/simulate', async (req, res) => {
   try {
@@ -160,10 +228,15 @@ app.post('/api/simulate', async (req, res) => {
         if (won) groupPoints += 3;
         if (drew) groupPoints += 1;
         
+        const oppPlayers = await getTeamPlayers(oppTeam.id);
+        const userScorers = simulateGoalscorers(draftedSquad, userGoals);
+        const oppScorers = simulateGoalscorers(oppPlayers, oppGoals);
+
         matches.push({
           stage, opponent: oppTeam.name, userGoals, oppGoals,
           result: won ? 'W' : (drew ? 'D' : 'L'),
-          oppRating, userRating
+          oppRating, userRating,
+          userScorers, oppScorers
         });
 
         if (i === 2) {
@@ -194,9 +267,14 @@ app.post('/api/simulate', async (req, res) => {
           finalResult = won ? 'W' : 'L';
         }
 
+        const oppPlayers = await getTeamPlayers(oppTeam.id);
+        const userScorers = simulateGoalscorers(draftedSquad, userGoals);
+        const oppScorers = simulateGoalscorers(oppPlayers, oppGoals);
+
         matches.push({
           stage, opponent: oppTeam.name, userGoals, oppGoals,
-          result: finalResult, penalties, oppRating, userRating
+          result: finalResult, penalties, oppRating, userRating,
+          userScorers, oppScorers
         });
 
         if (lost) {
