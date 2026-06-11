@@ -10,11 +10,36 @@ const API_URL = 'https://wc8-0.onrender.com/api';
 export default function SimulationPhase() {
   const location = useLocation();
   const navigate = useNavigate();
-  const { squad, formation, settings } = location.state || {};
 
-  const [matches, setMatches] = useState([]);
-  const [isSimulating, setIsSimulating] = useState(true);
-  const [simResult, setSimResult] = useState(null);
+  // Helper to load matching cached session if available
+  const getCachedSession = (currentSquad) => {
+    try {
+      const saved = localStorage.getItem('wc8_simulation_session');
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        if (parsed && parsed.squad) {
+          if (!currentSquad) return parsed;
+          const isSameSquad = parsed.squad.length === currentSquad.length &&
+            parsed.squad.every((p, i) => p && currentSquad[i] && p.id === currentSquad[i].id);
+          if (isSameSquad) return parsed;
+        }
+      }
+    } catch (e) {
+      console.error("Error reading simulation cache:", e);
+    }
+    return null;
+  };
+
+  const initialSquad = location.state?.squad || getCachedSession(null)?.squad || null;
+  const cached = getCachedSession(initialSquad);
+
+  const [squad, setSquad] = useState(initialSquad);
+  const [formation, setFormation] = useState(location.state?.formation || cached?.formation || null);
+  const [settings, setSettings] = useState(location.state?.settings || cached?.settings || null);
+
+  const [matches, setMatches] = useState(cached?.matches || []);
+  const [isSimulating, setIsSimulating] = useState(!cached);
+  const [simResult, setSimResult] = useState(cached?.simResult || null);
   const [error, setError] = useState(null);
 
   useEffect(() => {
@@ -22,11 +47,41 @@ export default function SimulationPhase() {
       navigate('/');
       return;
     }
+
     const runSimulation = async () => {
+      // Check if we already loaded matching cached session
       try {
+        const saved = localStorage.getItem('wc8_simulation_session');
+        if (saved) {
+          const parsed = JSON.parse(saved);
+          if (parsed && parsed.squad) {
+            const isSameSquad = parsed.squad.length === squad.length &&
+              parsed.squad.every((p, i) => p && squad[i] && p.id === squad[i].id);
+            if (isSameSquad && parsed.matches && parsed.simResult) {
+              setMatches(parsed.matches);
+              setSimResult(parsed.simResult);
+              setIsSimulating(false);
+              return;
+            }
+          }
+        }
+      } catch (e) {
+        console.error("Error parsing simulation cache in effect:", e);
+      }
+
+      try {
+        setIsSimulating(true);
         const response = await axios.post(`${API_URL}/simulate`, { draftedSquad: squad });
         setMatches(response.data.matches);
         setSimResult(response.data);
+        
+        localStorage.setItem('wc8_simulation_session', JSON.stringify({
+          squad,
+          formation,
+          settings,
+          matches: response.data.matches,
+          simResult: response.data
+        }));
       } catch (err) {
         console.error(err);
         setError("Simulation failed. Make sure backend is running.");
@@ -34,8 +89,9 @@ export default function SimulationPhase() {
         setIsSimulating(false);
       }
     };
+
     runSimulation();
-  }, [squad, navigate]);
+  }, [squad, formation, settings, navigate]);
 
   if (!squad) return null;
 
@@ -133,7 +189,14 @@ export default function SimulationPhase() {
               </>
             )}
             <br/><br/>
-            <button className="draft-btn" onClick={() => navigate('/')} style={{ padding: '0.8rem 2rem', fontSize: '1.2rem' }}>
+            <button 
+              className="draft-btn" 
+              onClick={() => {
+                localStorage.removeItem('wc8_simulation_session');
+                navigate('/');
+              }} 
+              style={{ padding: '0.8rem 2rem', fontSize: '1.2rem' }}
+            >
               <RotateCcw size={20} style={{ display: 'inline', marginRight: '0.5rem', verticalAlign: 'middle' }} /> Draft Again
             </button>
           </div>

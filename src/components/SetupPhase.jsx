@@ -1,9 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FORMATIONS } from '../App';
 
 export default function SetupPhase() {
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const savedSession = localStorage.getItem('wc8_simulation_session');
+    if (savedSession) {
+      try {
+        const parsed = JSON.parse(savedSession);
+        if (parsed && parsed.squad) {
+          navigate('/simulate');
+        }
+      } catch (e) {
+        console.error("Error checking simulation session on setup:", e);
+      }
+    }
+  }, [navigate]);
   const [selectedFormation, setSelectedFormation] = useState(null);
   const [draftSettings, setDraftSettings] = useState({
     era: 'ALL',
