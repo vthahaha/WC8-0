@@ -56,6 +56,33 @@ app.get('/api/draft/team', async (req, res) => {
   }
 });
 
+// Helper: calculate a team's overall from their top 11 players
+async function getTeamRating(teamId) {
+  const { rows } = await pool.query(
+    'SELECT rating FROM players WHERE team_id = $1 ORDER BY rating DESC LIMIT 11',
+    [teamId]
+  );
+  if (rows.length === 0) return 65; // fallback for teams with no players
+  const avg = rows.reduce((sum, p) => sum + p.rating, 0) / rows.length;
+  return Math.round(avg);
+}
+
+// Helper: simulate goals using a rating differential model.
+// expectedGoals feeds into a Poisson-like approximation with gaussian noise.
+function simulateGoals(expectedGoals) {
+  // Approximate gaussian noise (Box-Muller-lite: sum of 4 uniforms → mean 0, std ~0.82)
+  const noise = (Math.random() + Math.random() + Math.random() + Math.random() - 2) * 0.9;
+  return Math.max(0, Math.round(expectedGoals + noise));
+}
+
+// Helper: compute expected goals from a rating differential.
+// Base is 1.5 goals per team at equal ratings.
+// Every 10-point advantage adds ~0.5 expected goals and removes ~0.5 from the opponent.
+function expectedGoals(teamRating, opponentRating) {
+  const diff = teamRating - opponentRating;
+  return 1.5 + (diff / 20);
+}
+
 // Simulate the 8 matches
 app.post('/api/simulate', async (req, res) => {
   try {
@@ -65,12 +92,32 @@ app.post('/api/simulate', async (req, res) => {
       return res.status(400).json({ error: "Must provide a drafted squad of 11 players." });
     }
 
-    const userRating = Math.floor(
+    const userRating = Math.round(
       draftedSquad.reduce((sum, p) => sum + p.rating, 0) / 11
     );
 
-    const { rows: opponents } = await pool.query('SELECT * FROM teams ORDER BY RANDOM() LIMIT 8');
-    
+    // Draw 8 opponents — later stages preferentially stronger (pick best from 2-3 random teams)
+    const { rows: allOpponents } = await pool.query('SELECT * FROM teams ORDER BY RANDOM() LIMIT 24');
+    const opponents = [];
+    for (let i = 0; i < 8; i++) {
+      // For stages 0-2 (group), just pick a random team
+      // For stages 3+ (knockouts), pick the stronger of 2 candidates to simulate tougher opponents
+      const poolSize = i < 3 ? 1 : 2;
+      const candidates = allOpponents.slice(i * poolSize, i * poolSize + poolSize);
+      
+      if (candidates.length === 0) break;
+
+      if (candidates.length === 1) {
+        opponents.push(candidates[0]);
+      } else {
+        // Resolve candidates and pick stronger
+        const ratings = await Promise.all(candidates.map(c => getTeamRating(c.id)));
+        const bestIdx = ratings[0] >= ratings[1] ? 0 : 1;
+        candidates[bestIdx]._precomputedRating = ratings[bestIdx];
+        opponents.push(candidates[bestIdx]);
+      }
+    }
+
     const matches = [];
     let isEliminated = false;
     let groupPoints = 0;
@@ -89,28 +136,20 @@ app.post('/api/simulate', async (req, res) => {
       const isGroupStage = i < 3;
       const oppTeam = opponents[i];
 
-      const oppRating = oppTeam.rating || 75;
+      // Get opponent rating from their actual players (cached if precomputed)
+      const oppRating = oppTeam._precomputedRating ?? await getTeamRating(oppTeam.id);
 
-      // Base scores
-      let userScoreBase = (userRating / 12) + (Math.random() * 3 - 1.5); 
-      let oppScoreBase = (oppRating / 12) + (Math.random() * 3 - 1.5);
+      // Progressive difficulty: later knockout stages get a small opponent buff
+      // Representing home advantage / tournament pressure / momentum (max +5 rating equivalent)
+      const stagePressureBuff = i < 3 ? 0 : (i - 2) * 1.5;
 
-      // Add a progressive difficulty buff to make an 8-0 sweep very hard.
-      // Even if the opponent is randomly drawn, the pressure of later stages gives them a momentum boost.
-      const stageDifficultyBuff = i * 0.15; // up to +1.05 for the Final
-      oppScoreBase += stageDifficultyBuff;
+      const userExpected = expectedGoals(userRating, oppRating + stagePressureBuff);
+      const oppExpected  = expectedGoals(oppRating + stagePressureBuff, userRating);
 
-      let userGoals = Math.max(0, Math.floor(userScoreBase - 4));
-      let oppGoals = Math.max(0, Math.floor(oppScoreBase - 4));
-      
-      // Dynamic bonus: user has 20% chance to convert rating gap, opp has 40% chance
-      if (userRating - oppRating > 5 && Math.random() < 0.2) {
-         userGoals += 1;
-      } else if (oppRating - userRating > 5 && Math.random() < 0.4) {
-         oppGoals += 1;
-      }
+      let userGoals = simulateGoals(userExpected);
+      let oppGoals  = simulateGoals(oppExpected);
 
-      let won = userGoals > oppGoals;
+      let won  = userGoals > oppGoals;
       let drew = userGoals === oppGoals;
       let lost = userGoals < oppGoals;
       let penalties = null;
@@ -127,13 +166,11 @@ app.post('/api/simulate', async (req, res) => {
           oppRating, userRating
         });
 
-        // End of group stage logic
         if (i === 2) {
           if (groupPoints < 4) {
             isEliminated = true;
             eliminatedAt = "Group Stage";
           } else if (groupPoints === 4) {
-            // 50/50 chance to advance
             if (Math.random() < 0.5) {
               isEliminated = true;
               eliminatedAt = "Group Stage";
@@ -141,31 +178,30 @@ app.post('/api/simulate', async (req, res) => {
           }
         }
       } else {
-        // Knockout Stage
+        // Knockout: draws go to penalties
         let finalResult = won ? 'W' : 'L';
         if (drew) {
-           isPerfect = false;
-           // Penalties (70% user win chance)
-           const userWinsPens = Math.random() < 0.7;
-           const userPenScore = userWinsPens ? Math.floor(Math.random() * 2) + 3 : Math.floor(Math.random() * 3);
-           const oppPenScore = userWinsPens ? Math.floor(Math.random() * 3) : Math.floor(Math.random() * 2) + 3;
-           
-           penalties = { user: userPenScore, opp: oppPenScore };
-           won = userWinsPens;
-           lost = !userWinsPens;
-           finalResult = won ? 'W' : 'L';
+          isPerfect = false;
+          // User wins pens based on rating advantage (55-80% chance)
+          const ratingAdv = Math.min(Math.max((userRating - oppRating) / 30, -0.25), 0.25);
+          const userWinsPens = Math.random() < (0.65 + ratingAdv);
+          const userPenScore = userWinsPens ? Math.floor(Math.random() * 2) + 4 : Math.floor(Math.random() * 3) + 2;
+          const oppPenScore  = userWinsPens ? userPenScore - 1           : userPenScore + 1;
+          
+          penalties = { user: userPenScore, opp: oppPenScore };
+          won = userWinsPens;
+          lost = !userWinsPens;
+          finalResult = won ? 'W' : 'L';
         }
 
         matches.push({
           stage, opponent: oppTeam.name, userGoals, oppGoals,
-          result: finalResult,
-          penalties,
-          oppRating, userRating
+          result: finalResult, penalties, oppRating, userRating
         });
 
         if (lost) {
-           isEliminated = true;
-           eliminatedAt = stage;
+          isEliminated = true;
+          eliminatedAt = stage;
         }
       }
     }
@@ -173,6 +209,7 @@ app.post('/api/simulate', async (req, res) => {
     res.json({
       matches,
       groupPoints,
+      userRating,
       wonCup: !isEliminated && matches.length === 8,
       isPerfect: isPerfect && !isEliminated && matches.length === 8,
       eliminatedAt
