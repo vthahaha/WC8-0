@@ -259,8 +259,8 @@ app.post('/api/simulate', async (req, res) => {
       // Representing home advantage / tournament pressure / momentum (max +5 rating equivalent)
       const stagePressureBuff = i < 3 ? 0 : (i - 2) * 1.5;
 
-      const userExpected = expectedGoals(userRating, oppRating + stagePressureBuff);
-      const oppExpected  = expectedGoals(oppRating + stagePressureBuff, userRating);
+      const userExpected = expectedGoals(userRating + 3, oppRating + stagePressureBuff);
+      const oppExpected  = expectedGoals(oppRating + stagePressureBuff, userRating + 3);
 
       let userGoals = simulateGoals(userExpected);
       let oppGoals  = simulateGoals(oppExpected);
@@ -288,14 +288,18 @@ app.post('/api/simulate', async (req, res) => {
         });
 
         if (i === 2) {
-          if (groupPoints < 4) {
-            isEliminated = true;
-            eliminatedAt = "Group Stage";
-          } else if (groupPoints === 4) {
-            if (Math.random() < 0.5) {
+          if (groupPoints >= 4) {
+            // Qualify 100%
+          } else if (groupPoints === 3) {
+            // 30% chance to qualify as best 3rd place team
+            if (Math.random() > 0.3) {
               isEliminated = true;
               eliminatedAt = "Group Stage";
             }
+          } else {
+            // Less than 3 points is automatic elimination
+            isEliminated = true;
+            eliminatedAt = "Group Stage";
           }
         }
       } else {
