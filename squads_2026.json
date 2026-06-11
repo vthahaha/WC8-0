@@ -1,0 +1,5090 @@
+{
+  "Algeria 2026": [
+    {
+      "name": "MASTIL Melvin",
+      "position": "GK"
+    },
+    {
+      "name": "MANDI Aissa",
+      "position": "DF"
+    },
+    {
+      "name": "ABADA Achref",
+      "position": "DF"
+    },
+    {
+      "name": "TOUGAI Mohamed Amine",
+      "position": "DF"
+    },
+    {
+      "name": "BELAID Zineddine",
+      "position": "DF"
+    },
+    {
+      "name": "ZERROUKI Ramiz",
+      "position": "MF"
+    },
+    {
+      "name": "MAHREZ Riyad",
+      "position": "FW"
+    },
+    {
+      "name": "AOUAR Houssem",
+      "position": "MF"
+    },
+    {
+      "name": "GOUIRI Amine",
+      "position": "FW"
+    },
+    {
+      "name": "CHAIBI Fares",
+      "position": "MF"
+    },
+    {
+      "name": "HADJ MOUSSA Anis",
+      "position": "FW"
+    },
+    {
+      "name": "BENBOUALI Nadhir",
+      "position": "FW"
+    },
+    {
+      "name": "HADJAM Jaouen",
+      "position": "DF"
+    },
+    {
+      "name": "BOUDAOUI Hicham",
+      "position": "MF"
+    },
+    {
+      "name": "AIT-NOURI Rayan",
+      "position": "DF"
+    },
+    {
+      "name": "BENBOT Oussama",
+      "position": "GK"
+    },
+    {
+      "name": "BELGHALI Ra«k",
+      "position": "DF"
+    },
+    {
+      "name": "AMOURA Mohamed",
+      "position": "FW"
+    },
+    {
+      "name": "BENTALEB Nabil",
+      "position": "MF"
+    },
+    {
+      "name": "BOULBINA Adil",
+      "position": "FW"
+    },
+    {
+      "name": "BENSEBAINI Ramy",
+      "position": "DF"
+    },
+    {
+      "name": "MAZA Ibrahim",
+      "position": "MF"
+    },
+    {
+      "name": "ZIDANE Luca",
+      "position": "GK"
+    },
+    {
+      "name": "TITRAOUI Yassine",
+      "position": "MF"
+    },
+    {
+      "name": "GHEDJEMIS Fares",
+      "position": "FW"
+    },
+    {
+      "name": "CHERGUI Samir",
+      "position": "DF"
+    }
+  ],
+  "Argentina 2026": [
+    {
+      "name": "MUSSO Juan",
+      "position": "GK"
+    },
+    {
+      "name": "BALERDI Leonardo",
+      "position": "DF"
+    },
+    {
+      "name": "TAGLIAFICO Nicolas",
+      "position": "DF"
+    },
+    {
+      "name": "MONTIEL Gonzalo",
+      "position": "DF"
+    },
+    {
+      "name": "PAREDES Leandro",
+      "position": "MF"
+    },
+    {
+      "name": "MARTINEZ Lisandro",
+      "position": "DF"
+    },
+    {
+      "name": "DE PAUL Rodrigo",
+      "position": "MF"
+    },
+    {
+      "name": "BARCO Valentin",
+      "position": "MF"
+    },
+    {
+      "name": "ALVAREZ Julian",
+      "position": "FW"
+    },
+    {
+      "name": "MESSI Lionel",
+      "position": "FW"
+    },
+    {
+      "name": "LO CELSO Giovani",
+      "position": "MF"
+    },
+    {
+      "name": "RULLI Geronimo",
+      "position": "GK"
+    },
+    {
+      "name": "ROMERO Cristian",
+      "position": "DF"
+    },
+    {
+      "name": "PALACIOS Exequiel",
+      "position": "MF"
+    },
+    {
+      "name": "GONZALEZ Nico",
+      "position": "MF"
+    },
+    {
+      "name": "ALMADA Thiago",
+      "position": "FW"
+    },
+    {
+      "name": "SIMEONE Giuliano",
+      "position": "FW"
+    },
+    {
+      "name": "PAZ Nico",
+      "position": "FW"
+    },
+    {
+      "name": "OTAMENDI Nicolas",
+      "position": "DF"
+    },
+    {
+      "name": "MAC ALLISTER Alexis",
+      "position": "MF"
+    },
+    {
+      "name": "LOPEZ Jose Manuel",
+      "position": "FW"
+    },
+    {
+      "name": "MARTINEZ Lautaro",
+      "position": "FW"
+    },
+    {
+      "name": "MARTINEZ Emiliano",
+      "position": "GK"
+    },
+    {
+      "name": "FERNANDEZ Enzo",
+      "position": "MF"
+    },
+    {
+      "name": "MEDINA Facundo",
+      "position": "DF"
+    },
+    {
+      "name": "MOLINA Nahuel",
+      "position": "DF"
+    }
+  ],
+  "Australia 2026": [
+    {
+      "name": "RYAN Mathew",
+      "position": "GK"
+    },
+    {
+      "name": "DEGENEK Milos",
+      "position": "DF"
+    },
+    {
+      "name": "CIRCATI Alessandro",
+      "position": "DF"
+    },
+    {
+      "name": "ITALIANO Jacob",
+      "position": "DF"
+    },
+    {
+      "name": "BOS Jordan",
+      "position": "DF"
+    },
+    {
+      "name": "GERIA Jason",
+      "position": "DF"
+    },
+    {
+      "name": "LECKIE Mathew",
+      "position": "FW"
+    },
+    {
+      "name": "METCALFE Connor",
+      "position": "MF"
+    },
+    {
+      "name": "TOURE Mohamed",
+      "position": "FW"
+    },
+    {
+      "name": "HRUSTIC Ajdin",
+      "position": "FW"
+    },
+    {
+      "name": "MABIL Awer",
+      "position": "FW"
+    },
+    {
+      "name": "IZZO Paul",
+      "position": "GK"
+    },
+    {
+      "name": "ONEILL Aiden",
+      "position": "MF"
+    },
+    {
+      "name": "DEVLIN Cameron",
+      "position": "MF"
+    },
+    {
+      "name": "TREWIN Kai",
+      "position": "DF"
+    },
+    {
+      "name": "BEHICH Aziz",
+      "position": "DF"
+    },
+    {
+      "name": "IRANKUNDA Nestory",
+      "position": "FW"
+    },
+    {
+      "name": "BEACH Patrick",
+      "position": "GK"
+    },
+    {
+      "name": "SOUTTAR Harry",
+      "position": "DF"
+    },
+    {
+      "name": "VOLPATO Cristian",
+      "position": "FW"
+    },
+    {
+      "name": "BURGESS Cameron",
+      "position": "DF"
+    },
+    {
+      "name": "IRVINE Jackson",
+      "position": "MF"
+    },
+    {
+      "name": "VELUPILLAY Nishan",
+      "position": "FW"
+    },
+    {
+      "name": "OKON-ENGSTLER Paul",
+      "position": "MF"
+    },
+    {
+      "name": "HERRINGTON Lucas",
+      "position": "DF"
+    },
+    {
+      "name": "YENGI Tete",
+      "position": "FW"
+    }
+  ],
+  "Austria 2026": [
+    {
+      "name": "SCHLAGER Alexander",
+      "position": "GK"
+    },
+    {
+      "name": "AFFENGRUBER David",
+      "position": "DF"
+    },
+    {
+      "name": "DANSO Kevin",
+      "position": "DF"
+    },
+    {
+      "name": "SCHLAGER Xaver",
+      "position": "MF"
+    },
+    {
+      "name": "POSCH Stefan",
+      "position": "DF"
+    },
+    {
+      "name": "SEIWALD Nicolas",
+      "position": "MF"
+    },
+    {
+      "name": "ARNAUTOVIC Marko",
+      "position": "FW"
+    },
+    {
+      "name": "ALABA David",
+      "position": "DF"
+    },
+    {
+      "name": "SABITZER Marcel",
+      "position": "MF"
+    },
+    {
+      "name": "GRILLITSCH Florian",
+      "position": "MF"
+    },
+    {
+      "name": "GREGORITSCH Michael",
+      "position": "FW"
+    },
+    {
+      "name": "WIEGELE Florian",
+      "position": "GK"
+    },
+    {
+      "name": "PENTZ Patrick",
+      "position": "GK"
+    },
+    {
+      "name": "KALAJDZIC Sasa",
+      "position": "FW"
+    },
+    {
+      "name": "LIENHART Philipp",
+      "position": "DF"
+    },
+    {
+      "name": "MWENE Phillip",
+      "position": "DF"
+    },
+    {
+      "name": "CHUKWUEMEKA Carney",
+      "position": "MF"
+    },
+    {
+      "name": "SCHMID Romano",
+      "position": "MF"
+    },
+    {
+      "name": "BAUMGARTNER Christoph",
+      "position": "MF"
+    },
+    {
+      "name": "LAIMER Konrad",
+      "position": "MF"
+    },
+    {
+      "name": "WIMMER Patrick",
+      "position": "FW"
+    },
+    {
+      "name": "PRASS Alexander",
+      "position": "MF"
+    },
+    {
+      "name": "FRIEDL Marco",
+      "position": "DF"
+    },
+    {
+      "name": "WANNER Paul",
+      "position": "MF"
+    },
+    {
+      "name": "SVOBODA Michael",
+      "position": "DF"
+    },
+    {
+      "name": "SCHOEPF Alessandro",
+      "position": "MF"
+    }
+  ],
+  "Belgium 2026": [
+    {
+      "name": "COURTOIS Thibaut",
+      "position": "GK"
+    },
+    {
+      "name": "DEBAST Zeno",
+      "position": "DF"
+    },
+    {
+      "name": "THEATE Arthur",
+      "position": "DF"
+    },
+    {
+      "name": "MECHELE Brandon",
+      "position": "DF"
+    },
+    {
+      "name": "DE CUYPER Maxim",
+      "position": "DF"
+    },
+    {
+      "name": "WITSEL Axel",
+      "position": "MF"
+    },
+    {
+      "name": "DE BRUYNE Kevin",
+      "position": "MF"
+    },
+    {
+      "name": "TIELEMANS Youri",
+      "position": "MF"
+    },
+    {
+      "name": "LUKAKU Romelu",
+      "position": "FW"
+    },
+    {
+      "name": "TROSSARD Leandro",
+      "position": "FW"
+    },
+    {
+      "name": "DOKU Jeremy",
+      "position": "FW"
+    },
+    {
+      "name": "LAMMENS Senne",
+      "position": "GK"
+    },
+    {
+      "name": "PENDERS Mike",
+      "position": "GK"
+    },
+    {
+      "name": "LUKEBAKIO Dodi",
+      "position": "FW"
+    },
+    {
+      "name": "MEUNIER Thomas",
+      "position": "DF"
+    },
+    {
+      "name": "DE WINTER Koni",
+      "position": "DF"
+    },
+    {
+      "name": "DE KETELAERE Charles",
+      "position": "FW"
+    },
+    {
+      "name": "SEYS Joaquin",
+      "position": "DF"
+    },
+    {
+      "name": "MOREIRA Diego",
+      "position": "MF"
+    },
+    {
+      "name": "VANAKEN Hans",
+      "position": "MF"
+    },
+    {
+      "name": "CASTAGNE Timothy",
+      "position": "DF"
+    },
+    {
+      "name": "SAELEMAEKERS Alexis",
+      "position": "MF"
+    },
+    {
+      "name": "RASKIN Nicolas",
+      "position": "MF"
+    },
+    {
+      "name": "ONANA Amadou",
+      "position": "MF"
+    },
+    {
+      "name": "NGOY Nathan",
+      "position": "DF"
+    },
+    {
+      "name": "FERNANDEZ-PARDO Matias",
+      "position": "FW"
+    }
+  ],
+  "Bosnia And Herzegovina 2026": [
+    {
+      "name": "VASILJ Nikola",
+      "position": "GK"
+    },
+    {
+      "name": "MUJAKIC Nihad",
+      "position": "DF"
+    },
+    {
+      "name": "HADZIKADUNIC Dennis",
+      "position": "DF"
+    },
+    {
+      "name": "MUHAREMOVIC Tarik",
+      "position": "DF"
+    },
+    {
+      "name": "KOLASINAC Sead",
+      "position": "DF"
+    },
+    {
+      "name": "TAHIROVIC Benjamin",
+      "position": "MF"
+    },
+    {
+      "name": "DEDIC Amar",
+      "position": "DF"
+    },
+    {
+      "name": "GIGOVIC Armin",
+      "position": "MF"
+    },
+    {
+      "name": "BAZDAR Samed",
+      "position": "FW"
+    },
+    {
+      "name": "DEMIROVIC Ermedin",
+      "position": "FW"
+    },
+    {
+      "name": "DZEKO Edin",
+      "position": "FW"
+    },
+    {
+      "name": "JURKAS Mladen",
+      "position": "GK"
+    },
+    {
+      "name": "BASIC Ivan",
+      "position": "MF"
+    },
+    {
+      "name": "SUNJIC Ivan",
+      "position": "MF"
+    },
+    {
+      "name": "MEMIC Amar",
+      "position": "MF"
+    },
+    {
+      "name": "HADZIAHMETOVIC Amir",
+      "position": "MF"
+    },
+    {
+      "name": "BURNIC Dzenis",
+      "position": "MF"
+    },
+    {
+      "name": "KATIC Nikola",
+      "position": "DF"
+    },
+    {
+      "name": "ALAJBEGOVIC Kerim",
+      "position": "FW"
+    },
+    {
+      "name": "BAJRAKTAREVIC Esmir",
+      "position": "FW"
+    },
+    {
+      "name": "RADELJIC Stjepan",
+      "position": "DF"
+    },
+    {
+      "name": "ZLOMISLIC Martin",
+      "position": "GK"
+    },
+    {
+      "name": "TABAKOVIC Haris",
+      "position": "FW"
+    },
+    {
+      "name": "CELIK Nidal",
+      "position": "DF"
+    },
+    {
+      "name": "LUKIC Jovo",
+      "position": "FW"
+    },
+    {
+      "name": "MAHMIC Ermin",
+      "position": "MF"
+    }
+  ],
+  "Brazil 2026": [
+    {
+      "name": "ALISSON",
+      "position": "GK"
+    },
+    {
+      "name": "EDERSON SILVA",
+      "position": "MF"
+    },
+    {
+      "name": "GABRIEL MAGALHAES",
+      "position": "DF"
+    },
+    {
+      "name": "MARQUINHOS",
+      "position": "DF"
+    },
+    {
+      "name": "CASEMIRO",
+      "position": "MF"
+    },
+    {
+      "name": "ALEX SANDRO",
+      "position": "DF"
+    },
+    {
+      "name": "VINICIUS JUNIOR",
+      "position": "FW"
+    },
+    {
+      "name": "BRUNO GUIMARAES",
+      "position": "MF"
+    },
+    {
+      "name": "MATHEUS CUNHA",
+      "position": "FW"
+    },
+    {
+      "name": "NEYMAR JR",
+      "position": "FW"
+    },
+    {
+      "name": "RAPHINHA",
+      "position": "FW"
+    },
+    {
+      "name": "WEVERTON",
+      "position": "GK"
+    },
+    {
+      "name": "DANILO",
+      "position": "DF"
+    },
+    {
+      "name": "BREMER",
+      "position": "DF"
+    },
+    {
+      "name": "LEO PEREIRA",
+      "position": "DF"
+    },
+    {
+      "name": "DOUGLAS SANTOS",
+      "position": "DF"
+    },
+    {
+      "name": "FABINHO",
+      "position": "MF"
+    },
+    {
+      "name": "DANILO SANTOS",
+      "position": "MF"
+    },
+    {
+      "name": "ENDRICK",
+      "position": "FW"
+    },
+    {
+      "name": "LUCAS PAQUETA",
+      "position": "MF"
+    },
+    {
+      "name": "LUIZ HENRIQUE",
+      "position": "FW"
+    },
+    {
+      "name": "GABRIEL MARTINELLI",
+      "position": "FW"
+    },
+    {
+      "name": "EDERSON",
+      "position": "GK"
+    },
+    {
+      "name": "ROGER IBANEZ",
+      "position": "DF"
+    },
+    {
+      "name": "IGOR THIAGO",
+      "position": "FW"
+    },
+    {
+      "name": "RAYAN",
+      "position": "FW"
+    }
+  ],
+  "Cabo Verde 2026": [
+    {
+      "name": "VOZINHA",
+      "position": "GK"
+    },
+    {
+      "name": "STOPIRA",
+      "position": "DF"
+    },
+    {
+      "name": "DINEY BORGES",
+      "position": "DF"
+    },
+    {
+      "name": "PICO LOPES",
+      "position": "DF"
+    },
+    {
+      "name": "LOGAN COSTA",
+      "position": "DF"
+    },
+    {
+      "name": "KEVIN PINA",
+      "position": "MF"
+    },
+    {
+      "name": "JOVANE CABRAL",
+      "position": "MF"
+    },
+    {
+      "name": "JOAO PAULO",
+      "position": "MF"
+    },
+    {
+      "name": "GILSON BENCHIMOL",
+      "position": "FW"
+    },
+    {
+      "name": "JAMIRO MONTEIRO",
+      "position": "MF"
+    },
+    {
+      "name": "GARRY RODRIGUES",
+      "position": "MF"
+    },
+    {
+      "name": "MARCIO ROSA",
+      "position": "GK"
+    },
+    {
+      "name": "SIDNY LOPES CABRAL",
+      "position": "DF"
+    },
+    {
+      "name": "DEROY DUARTE",
+      "position": "MF"
+    },
+    {
+      "name": "LAROS DUARTE",
+      "position": "MF"
+    },
+    {
+      "name": "YANNICK SEMEDO",
+      "position": "MF"
+    },
+    {
+      "name": "WILLY SEMEDO",
+      "position": "MF"
+    },
+    {
+      "name": "TELMO ARCANJO",
+      "position": "MF"
+    },
+    {
+      "name": "DAILON LIVRAMENTO",
+      "position": "FW"
+    },
+    {
+      "name": "RYAN MENDES",
+      "position": "FW"
+    },
+    {
+      "name": "NUNO DA COSTA",
+      "position": "MF"
+    },
+    {
+      "name": "STEVEN MOREIRA",
+      "position": "DF"
+    },
+    {
+      "name": "CJ DOS SANTOS",
+      "position": "GK"
+    },
+    {
+      "name": "WAGNER PINA",
+      "position": "DF"
+    },
+    {
+      "name": "KELVIN PIRES",
+      "position": "DF"
+    },
+    {
+      "name": "HELIO VARELA",
+      "position": "MF"
+    }
+  ],
+  "Canada 2026": [
+    {
+      "name": "ST. CLAIR Dayne",
+      "position": "GK"
+    },
+    {
+      "name": "JOHNSTON Alistair",
+      "position": "DF"
+    },
+    {
+      "name": "JONES Al«e",
+      "position": "DF"
+    },
+    {
+      "name": "DE FOUGEROLLES Luc",
+      "position": "DF"
+    },
+    {
+      "name": "WATERMAN Joel",
+      "position": "DF"
+    },
+    {
+      "name": "CHOINIERE Mathieu",
+      "position": "MF"
+    },
+    {
+      "name": "EUSTAQUIO Stephen",
+      "position": "MF"
+    },
+    {
+      "name": "KONE Ismael",
+      "position": "MF"
+    },
+    {
+      "name": "LARIN Cyle",
+      "position": "FW"
+    },
+    {
+      "name": "DAVID Jonathan",
+      "position": "FW"
+    },
+    {
+      "name": "MILLAR Liam",
+      "position": "MF"
+    },
+    {
+      "name": "OLUWASEYI Tani",
+      "position": "FW"
+    },
+    {
+      "name": "CORNELIUS Derek",
+      "position": "DF"
+    },
+    {
+      "name": "SHAFFELBURG Jacob",
+      "position": "MF"
+    },
+    {
+      "name": "BOMBITO Moise",
+      "position": "DF"
+    },
+    {
+      "name": "CREPEAU Maxime",
+      "position": "GK"
+    },
+    {
+      "name": "BUCHANAN Tajon",
+      "position": "FW"
+    },
+    {
+      "name": "GOODMAN Owen",
+      "position": "GK"
+    },
+    {
+      "name": "DAVIES Alphonso",
+      "position": "DF"
+    },
+    {
+      "name": "AHMED Ali",
+      "position": "FW"
+    },
+    {
+      "name": "OSORIO Jonathan",
+      "position": "MF"
+    },
+    {
+      "name": "LARYEA Richie",
+      "position": "DF"
+    },
+    {
+      "name": "SIGUR Niko",
+      "position": "DF"
+    },
+    {
+      "name": "DAVID Promise",
+      "position": "FW"
+    },
+    {
+      "name": "SALIBA Nathan",
+      "position": "MF"
+    },
+    {
+      "name": "FLORES Marcelo",
+      "position": "MF"
+    }
+  ],
+  "Colombia 2026": [
+    {
+      "name": "OSPINA David",
+      "position": "GK"
+    },
+    {
+      "name": "MUNOZ Daniel",
+      "position": "DF"
+    },
+    {
+      "name": "LUCUMI Jhon",
+      "position": "DF"
+    },
+    {
+      "name": "ARIAS Santiago",
+      "position": "DF"
+    },
+    {
+      "name": "CASTANO Kevin",
+      "position": "MF"
+    },
+    {
+      "name": "RIOS Richard",
+      "position": "MF"
+    },
+    {
+      "name": "DIAZ Luis",
+      "position": "FW"
+    },
+    {
+      "name": "CARRASCAL Jorge",
+      "position": "MF"
+    },
+    {
+      "name": "CORDOBA Jhon",
+      "position": "FW"
+    },
+    {
+      "name": "RODRIGUEZ James",
+      "position": "MF"
+    },
+    {
+      "name": "ARIAS Jhon",
+      "position": "MF"
+    },
+    {
+      "name": "VARGAS Camilo",
+      "position": "GK"
+    },
+    {
+      "name": "MINA Yerry",
+      "position": "DF"
+    },
+    {
+      "name": "PUERTA Gustavo",
+      "position": "DF"
+    },
+    {
+      "name": "PORTILLA Juan",
+      "position": "MF"
+    },
+    {
+      "name": "LERMA Jefferson",
+      "position": "MF"
+    },
+    {
+      "name": "MOJICA Johan",
+      "position": "DF"
+    },
+    {
+      "name": "DITTA Willer",
+      "position": "DF"
+    },
+    {
+      "name": "HERNANDEZ Cucho",
+      "position": "FW"
+    },
+    {
+      "name": "QUINTERO Juan",
+      "position": "MF"
+    },
+    {
+      "name": "CAMPAZ Jaminton",
+      "position": "FW"
+    },
+    {
+      "name": "MACHADO Deiver",
+      "position": "DF"
+    },
+    {
+      "name": "SANCHEZ Davinson",
+      "position": "DF"
+    },
+    {
+      "name": "MONTERO Alvaro",
+      "position": "GK"
+    },
+    {
+      "name": "SUAREZ Luis",
+      "position": "FW"
+    },
+    {
+      "name": "GOMEZ Andres",
+      "position": "FW"
+    }
+  ],
+  "Congo DR 2026": [
+    {
+      "name": "MPASI Lionel",
+      "position": "GK"
+    },
+    {
+      "name": "WAN-BISSAKA Aaron",
+      "position": "DF"
+    },
+    {
+      "name": "KAPUADI Steve",
+      "position": "DF"
+    },
+    {
+      "name": "TUANZEBE Axel",
+      "position": "DF"
+    },
+    {
+      "name": "BATUBINSIKA Dylan",
+      "position": "DF"
+    },
+    {
+      "name": "MUKAU Ngalayel",
+      "position": "MF"
+    },
+    {
+      "name": "MBUKU Nathanael",
+      "position": "MF"
+    },
+    {
+      "name": "MOUTOUSSAMY Samuel",
+      "position": "MF"
+    },
+    {
+      "name": "CIPENGA Brian",
+      "position": "FW"
+    },
+    {
+      "name": "BONGONDA Theo",
+      "position": "MF"
+    },
+    {
+      "name": "KAKUTA Gael",
+      "position": "FW"
+    },
+    {
+      "name": "KAYEMBE Joris",
+      "position": "DF"
+    },
+    {
+      "name": "ELIA Meschack",
+      "position": "FW"
+    },
+    {
+      "name": "SADIKI Noah",
+      "position": "MF"
+    },
+    {
+      "name": "TSHIBOLA Aaron",
+      "position": "MF"
+    },
+    {
+      "name": "FAYULU Timothy",
+      "position": "GK"
+    },
+    {
+      "name": "BAKAMBU Cedric",
+      "position": "FW"
+    },
+    {
+      "name": "PICKEL Charles",
+      "position": "MF"
+    },
+    {
+      "name": "MAYELE Fiston",
+      "position": "FW"
+    },
+    {
+      "name": "WISSA Yoane",
+      "position": "FW"
+    },
+    {
+      "name": "EPOLO Matthieu",
+      "position": "GK"
+    },
+    {
+      "name": "MBEMBA Chancel",
+      "position": "DF"
+    },
+    {
+      "name": "BANZA Simon",
+      "position": "FW"
+    },
+    {
+      "name": "KALULU Gedeon",
+      "position": "DF"
+    },
+    {
+      "name": "KAYEMBE Edo",
+      "position": "MF"
+    },
+    {
+      "name": "MASUAKU Arthur",
+      "position": "DF"
+    }
+  ],
+  "Côte D'Ivoire 2026": [
+    {
+      "name": "FOFANA Yahia",
+      "position": "GK"
+    },
+    {
+      "name": "DIOMANDE Ousmane",
+      "position": "DF"
+    },
+    {
+      "name": "KONAN Ghislain",
+      "position": "DF"
+    },
+    {
+      "name": "SERI Jean Michael",
+      "position": "MF"
+    },
+    {
+      "name": "SINGO Wilfried",
+      "position": "DF"
+    },
+    {
+      "name": "FOFANA Seko",
+      "position": "MF"
+    },
+    {
+      "name": "KOSSOUNOU Odilon",
+      "position": "DF"
+    },
+    {
+      "name": "KESSIE Franck",
+      "position": "MF"
+    },
+    {
+      "name": "BONNY Ange-Yoan",
+      "position": "FW"
+    },
+    {
+      "name": "ADINGRA Simon",
+      "position": "FW"
+    },
+    {
+      "name": "DIOMANDE Yan",
+      "position": "FW"
+    },
+    {
+      "name": "WAHI Elye",
+      "position": "FW"
+    },
+    {
+      "name": "OPERI Christopher",
+      "position": "DF"
+    },
+    {
+      "name": "DIAKITE Oumar",
+      "position": "FW"
+    },
+    {
+      "name": "DIALLO Amad",
+      "position": "FW"
+    },
+    {
+      "name": "KONE Mohamed",
+      "position": "GK"
+    },
+    {
+      "name": "DOUE Guela",
+      "position": "DF"
+    },
+    {
+      "name": "SANGARE Ibrahim",
+      "position": "MF"
+    },
+    {
+      "name": "PEPE Nicolas",
+      "position": "FW"
+    },
+    {
+      "name": "AGBADOU Emmanuel",
+      "position": "DF"
+    },
+    {
+      "name": "NDICKA Evan",
+      "position": "DF"
+    },
+    {
+      "name": "GUESSAND Evann",
+      "position": "FW"
+    },
+    {
+      "name": "LAFONT Alban",
+      "position": "GK"
+    },
+    {
+      "name": "TOURE Bazoumana",
+      "position": "FW"
+    },
+    {
+      "name": "GUIAGON Parfait",
+      "position": "MF"
+    },
+    {
+      "name": "OULAI Christ Inao",
+      "position": "MF"
+    }
+  ],
+  "Croatia 2026": [
+    {
+      "name": "LIVAKOVIC Dominik",
+      "position": "GK"
+    },
+    {
+      "name": "STANISIC Josip",
+      "position": "DF"
+    },
+    {
+      "name": "PONGRACIC Marin",
+      "position": "DF"
+    },
+    {
+      "name": "GVARDIOL Josko",
+      "position": "DF"
+    },
+    {
+      "name": "CALETA-CAR Duje",
+      "position": "DF"
+    },
+    {
+      "name": "SUTALO Josip",
+      "position": "DF"
+    },
+    {
+      "name": "MORO Nikola",
+      "position": "MF"
+    },
+    {
+      "name": "KOVACIC Mateo",
+      "position": "MF"
+    },
+    {
+      "name": "KRAMARIC Andrej",
+      "position": "FW"
+    },
+    {
+      "name": "MODRIC Luka",
+      "position": "MF"
+    },
+    {
+      "name": "BUDIMIR Ante",
+      "position": "FW"
+    },
+    {
+      "name": "PANDUR Ivor",
+      "position": "GK"
+    },
+    {
+      "name": "VLASIC Nikola",
+      "position": "MF"
+    },
+    {
+      "name": "PERISIC Ivan",
+      "position": "FW"
+    },
+    {
+      "name": "PASALIC Mario",
+      "position": "MF"
+    },
+    {
+      "name": "BATURINA Martin",
+      "position": "MF"
+    },
+    {
+      "name": "SUCIC Petar",
+      "position": "MF"
+    },
+    {
+      "name": "JAKIC Kristijan",
+      "position": "DF"
+    },
+    {
+      "name": "FRUK Toni",
+      "position": "MF"
+    },
+    {
+      "name": "MATANOVIC Igor",
+      "position": "FW"
+    },
+    {
+      "name": "SUCIC Luka",
+      "position": "MF"
+    },
+    {
+      "name": "VUSKOVIC Luka",
+      "position": "DF"
+    },
+    {
+      "name": "KOTARSKI Dominik",
+      "position": "GK"
+    },
+    {
+      "name": "PASALIC Marco",
+      "position": "FW"
+    },
+    {
+      "name": "ERLIC Martin",
+      "position": "DF"
+    },
+    {
+      "name": "MUSA Petar",
+      "position": "FW"
+    }
+  ],
+  "Curaçao 2026": [
+    {
+      "name": "ROOM Eloy",
+      "position": "GK"
+    },
+    {
+      "name": "SAMBO Shurandy",
+      "position": "DF"
+    },
+    {
+      "name": "GAARI Jurien",
+      "position": "DF"
+    },
+    {
+      "name": "VAN EIJMA Roshon",
+      "position": "DF"
+    },
+    {
+      "name": "FLORANUS Sherel",
+      "position": "DF"
+    },
+    {
+      "name": "ROEMERATOE Godfried",
+      "position": "MF"
+    },
+    {
+      "name": "BACUNA Juninho",
+      "position": "MF"
+    },
+    {
+      "name": "COMENENCIA Livano",
+      "position": "MF"
+    },
+    {
+      "name": "LOCADIA Juergen",
+      "position": "FW"
+    },
+    {
+      "name": "BACUNA Leandro",
+      "position": "MF"
+    },
+    {
+      "name": "ANTONISSE Jeremy",
+      "position": "FW"
+    },
+    {
+      "name": "HANSEN Sontje",
+      "position": "FW"
+    },
+    {
+      "name": "NOSLIN Tyrese",
+      "position": "FW"
+    },
+    {
+      "name": "GORRE Kenji",
+      "position": "FW"
+    },
+    {
+      "name": "MARTHA Arjany",
+      "position": "MF"
+    },
+    {
+      "name": "MARGARITHA Jearl",
+      "position": "FW"
+    },
+    {
+      "name": "KUWAS Brandley",
+      "position": "FW"
+    },
+    {
+      "name": "OBISPO Armando",
+      "position": "DF"
+    },
+    {
+      "name": "KASTANEER Gervane",
+      "position": "FW"
+    },
+    {
+      "name": "BRENET Joshua",
+      "position": "DF"
+    },
+    {
+      "name": "CHONG Tahith",
+      "position": "MF"
+    },
+    {
+      "name": "FELIDA Kevin",
+      "position": "MF"
+    },
+    {
+      "name": "BAZOER Riechedly",
+      "position": "DF"
+    },
+    {
+      "name": "FONVILLE Deveron",
+      "position": "DF"
+    },
+    {
+      "name": "BODAK Tyrick",
+      "position": "GK"
+    },
+    {
+      "name": "DOORNBUSCH Trevor",
+      "position": "GK"
+    }
+  ],
+  "Czechia 2026": [
+    {
+      "name": "KOVAR Matej",
+      "position": "GK"
+    },
+    {
+      "name": "ZIMA David",
+      "position": "DF"
+    },
+    {
+      "name": "HOLES Tomas",
+      "position": "DF"
+    },
+    {
+      "name": "HRANAC Robin",
+      "position": "DF"
+    },
+    {
+      "name": "COUFAL Vladimir",
+      "position": "DF"
+    },
+    {
+      "name": "CHALOUPEK Stepan",
+      "position": "DF"
+    },
+    {
+      "name": "KREJCI Ladislav",
+      "position": "DF"
+    },
+    {
+      "name": "DARIDA Vladimir",
+      "position": "MF"
+    },
+    {
+      "name": "HLOZEK Adam",
+      "position": "FW"
+    },
+    {
+      "name": "SCHICK Patrik",
+      "position": "FW"
+    },
+    {
+      "name": "KUCHTA Jan",
+      "position": "FW"
+    },
+    {
+      "name": "CERV Lukas",
+      "position": "MF"
+    },
+    {
+      "name": "CHYTIL Mojmir",
+      "position": "FW"
+    },
+    {
+      "name": "JURASEK David",
+      "position": "DF"
+    },
+    {
+      "name": "SULC Pavel",
+      "position": "FW"
+    },
+    {
+      "name": "STANEK Jindrich",
+      "position": "GK"
+    },
+    {
+      "name": "PROVOD Lukas",
+      "position": "MF"
+    },
+    {
+      "name": "SADILEK Michal",
+      "position": "MF"
+    },
+    {
+      "name": "CHORY Tomas",
+      "position": "FW"
+    },
+    {
+      "name": "ZELENY Jaroslav",
+      "position": "DF"
+    },
+    {
+      "name": "DOUDERA David",
+      "position": "DF"
+    },
+    {
+      "name": "SOUCEK Tomas",
+      "position": "MF"
+    },
+    {
+      "name": "HORNICEK Lukas",
+      "position": "GK"
+    },
+    {
+      "name": "SOJKA Alexandr",
+      "position": "MF"
+    },
+    {
+      "name": "SOCHUREK Hugo",
+      "position": "MF"
+    },
+    {
+      "name": "VISINSKY Denis",
+      "position": "FW"
+    }
+  ],
+  "Ecuador 2026": [
+    {
+      "name": "GALINDEZ Hernan",
+      "position": "GK"
+    },
+    {
+      "name": "TORRES Felix",
+      "position": "DF"
+    },
+    {
+      "name": "HINCAPIE Piero",
+      "position": "DF"
+    },
+    {
+      "name": "ORDONEZ Joel",
+      "position": "DF"
+    },
+    {
+      "name": "ALCIVAR Jordy",
+      "position": "MF"
+    },
+    {
+      "name": "PACHO Willian",
+      "position": "DF"
+    },
+    {
+      "name": "ESTUPINAN Pervis",
+      "position": "DF"
+    },
+    {
+      "name": "VALENCIA Anthony",
+      "position": "MF"
+    },
+    {
+      "name": "YEBOAH John",
+      "position": "FW"
+    },
+    {
+      "name": "PAEZ Kendry",
+      "position": "MF"
+    },
+    {
+      "name": "RODRIGUEZ Kevin",
+      "position": "FW"
+    },
+    {
+      "name": "RAMIREZ Moises",
+      "position": "GK"
+    },
+    {
+      "name": "VALENCIA Enner",
+      "position": "FW"
+    },
+    {
+      "name": "MINDA Alan",
+      "position": "MF"
+    },
+    {
+      "name": "VITE Pedro",
+      "position": "MF"
+    },
+    {
+      "name": "CAICEDO Jordy",
+      "position": "FW"
+    },
+    {
+      "name": "PRECIADO Angelo",
+      "position": "DF"
+    },
+    {
+      "name": "CASTILLO Denil",
+      "position": "MF"
+    },
+    {
+      "name": "PLATA Gonzalo",
+      "position": "FW"
+    },
+    {
+      "name": "ANGULO Nilson",
+      "position": "FW"
+    },
+    {
+      "name": "FRANCO Alan",
+      "position": "MF"
+    },
+    {
+      "name": "VALLE Gonzalo",
+      "position": "GK"
+    },
+    {
+      "name": "CAICEDO Moises",
+      "position": "MF"
+    },
+    {
+      "name": "AREVALO Jeremy",
+      "position": "FW"
+    },
+    {
+      "name": "POROZO Jackson",
+      "position": "DF"
+    },
+    {
+      "name": "MEDINA Yaimar",
+      "position": "DF"
+    }
+  ],
+  "Egypt 2026": [
+    {
+      "name": "MOHAMED ELSHENAWY",
+      "position": "GK"
+    },
+    {
+      "name": "YASSER IBRAHIM",
+      "position": "DF"
+    },
+    {
+      "name": "MOHAMED HANY",
+      "position": "DF"
+    },
+    {
+      "name": "HOSSAM ABDELMAGUID",
+      "position": "DF"
+    },
+    {
+      "name": "RAMY RABIA",
+      "position": "DF"
+    },
+    {
+      "name": "MOHAMED ABDELMONEIM",
+      "position": "DF"
+    },
+    {
+      "name": "TREZEGUET",
+      "position": "FW"
+    },
+    {
+      "name": "EMAM ASHOUR",
+      "position": "MF"
+    },
+    {
+      "name": "HAMZA ABDELKARIM",
+      "position": "FW"
+    },
+    {
+      "name": "MOHAMED SALAH",
+      "position": "FW"
+    },
+    {
+      "name": "MOSTAFA ZICO",
+      "position": "MF"
+    },
+    {
+      "name": "HAISSEM HASSAN",
+      "position": "FW"
+    },
+    {
+      "name": "AHMED FATOUH",
+      "position": "DF"
+    },
+    {
+      "name": "HAMDY FATHY",
+      "position": "MF"
+    },
+    {
+      "name": "KARIM HAFEZ",
+      "position": "DF"
+    },
+    {
+      "name": "MAHDY SOLIMAN",
+      "position": "GK"
+    },
+    {
+      "name": "MOHANAD LASHIN",
+      "position": "MF"
+    },
+    {
+      "name": "NABIL DONGA",
+      "position": "MF"
+    },
+    {
+      "name": "MARAWAN ATTIA",
+      "position": "MF"
+    },
+    {
+      "name": "IBRAHIM ADEL",
+      "position": "FW"
+    },
+    {
+      "name": "MAHMOUD SABER",
+      "position": "MF"
+    },
+    {
+      "name": "OMAR MARMOUSH",
+      "position": "FW"
+    },
+    {
+      "name": "MOSTAFA SHOUBIR",
+      "position": "GK"
+    },
+    {
+      "name": "TAREK ALAA",
+      "position": "DF"
+    },
+    {
+      "name": "ZIZO",
+      "position": "FW"
+    },
+    {
+      "name": "MOHAMED ALAA",
+      "position": "GK"
+    }
+  ],
+  "England 2026": [
+    {
+      "name": "PICKFORD Jordan",
+      "position": "GK"
+    },
+    {
+      "name": "KONSA Ezri",
+      "position": "DF"
+    },
+    {
+      "name": "OREILLY Nico",
+      "position": "DF"
+    },
+    {
+      "name": "RICE Declan",
+      "position": "MF"
+    },
+    {
+      "name": "STONES John",
+      "position": "DF"
+    },
+    {
+      "name": "GUEHI Marc",
+      "position": "DF"
+    },
+    {
+      "name": "SAKA Bukayo",
+      "position": "FW"
+    },
+    {
+      "name": "ANDERSON Elliot",
+      "position": "MF"
+    },
+    {
+      "name": "KANE Harry",
+      "position": "FW"
+    },
+    {
+      "name": "BELLINGHAM Jude",
+      "position": "MF"
+    },
+    {
+      "name": "RASHFORD Marcus",
+      "position": "FW"
+    },
+    {
+      "name": "LIVRAMENTO Tino",
+      "position": "DF"
+    },
+    {
+      "name": "HENDERSON Dean",
+      "position": "GK"
+    },
+    {
+      "name": "HENDERSON Jordan",
+      "position": "MF"
+    },
+    {
+      "name": "BURN Dan",
+      "position": "DF"
+    },
+    {
+      "name": "MAINOO Kobbie",
+      "position": "MF"
+    },
+    {
+      "name": "ROGERS Morgan",
+      "position": "MF"
+    },
+    {
+      "name": "GORDON Anthony",
+      "position": "FW"
+    },
+    {
+      "name": "WATKINS Ollie",
+      "position": "FW"
+    },
+    {
+      "name": "MADUEKE Noni",
+      "position": "FW"
+    },
+    {
+      "name": "EZE Eberechi",
+      "position": "MF"
+    },
+    {
+      "name": "TONEY Ivan",
+      "position": "FW"
+    },
+    {
+      "name": "TRAFFORD James",
+      "position": "GK"
+    },
+    {
+      "name": "JAMES Reece",
+      "position": "DF"
+    },
+    {
+      "name": "SPENCE Djed",
+      "position": "DF"
+    },
+    {
+      "name": "QUANSAH Jarell",
+      "position": "DF"
+    }
+  ],
+  "France 2026": [
+    {
+      "name": "SAMBA Brice",
+      "position": "GK"
+    },
+    {
+      "name": "GUSTO Malo",
+      "position": "DF"
+    },
+    {
+      "name": "DIGNE Lucas",
+      "position": "DF"
+    },
+    {
+      "name": "UPAMECANO Dayot",
+      "position": "DF"
+    },
+    {
+      "name": "KOUNDE Jules",
+      "position": "DF"
+    },
+    {
+      "name": "KONE Manu",
+      "position": "MF"
+    },
+    {
+      "name": "DEMBELE Ousmane",
+      "position": "FW"
+    },
+    {
+      "name": "TCHOUAMENI Aurelien",
+      "position": "MF"
+    },
+    {
+      "name": "THURAM Marcus",
+      "position": "FW"
+    },
+    {
+      "name": "MBAPPE Kylian",
+      "position": "FW"
+    },
+    {
+      "name": "OLISE Michael",
+      "position": "FW"
+    },
+    {
+      "name": "BARCOLA Bradley",
+      "position": "FW"
+    },
+    {
+      "name": "KANTE Ngolo",
+      "position": "MF"
+    },
+    {
+      "name": "RABIOT Adrien",
+      "position": "MF"
+    },
+    {
+      "name": "KONATE Ibrahima",
+      "position": "DF"
+    },
+    {
+      "name": "MAIGNAN Mike",
+      "position": "GK"
+    },
+    {
+      "name": "SALIBA William",
+      "position": "DF"
+    },
+    {
+      "name": "ZAIRE-EMERY Warren",
+      "position": "MF"
+    },
+    {
+      "name": "HERNANDEZ Theo",
+      "position": "DF"
+    },
+    {
+      "name": "DOUE Desire",
+      "position": "FW"
+    },
+    {
+      "name": "HERNANDEZ Lucas",
+      "position": "DF"
+    },
+    {
+      "name": "MATETA Jean-Philippe",
+      "position": "FW"
+    },
+    {
+      "name": "RISSER Robin",
+      "position": "GK"
+    },
+    {
+      "name": "CHERKI Rayan",
+      "position": "MF"
+    },
+    {
+      "name": "AKLIOUCHE Maghnes",
+      "position": "MF"
+    },
+    {
+      "name": "LACROIX Maxence",
+      "position": "DF"
+    }
+  ],
+  "Germany 2026": [
+    {
+      "name": "NEUER Manuel",
+      "position": "GK"
+    },
+    {
+      "name": "RUEDIGER Antonio",
+      "position": "DF"
+    },
+    {
+      "name": "ANTON Waldemar",
+      "position": "DF"
+    },
+    {
+      "name": "TAH Jonathan",
+      "position": "DF"
+    },
+    {
+      "name": "PAVLOVIC Aleksandar",
+      "position": "MF"
+    },
+    {
+      "name": "KIMMICH Joshua",
+      "position": "DF"
+    },
+    {
+      "name": "HAVERTZ Kai",
+      "position": "FW"
+    },
+    {
+      "name": "GORETZKA Leon",
+      "position": "MF"
+    },
+    {
+      "name": "LEWELING Jamie",
+      "position": "MF"
+    },
+    {
+      "name": "MUSIALA Jamal",
+      "position": "MF"
+    },
+    {
+      "name": "WOLTEMADE Nick",
+      "position": "FW"
+    },
+    {
+      "name": "BAUMANN Oliver",
+      "position": "GK"
+    },
+    {
+      "name": "GROSS Pascal",
+      "position": "MF"
+    },
+    {
+      "name": "BEIER Maximilian",
+      "position": "FW"
+    },
+    {
+      "name": "SCHLOTTERBECK Nico",
+      "position": "DF"
+    },
+    {
+      "name": "STILLER Angelo",
+      "position": "MF"
+    },
+    {
+      "name": "WIRTZ Florian",
+      "position": "MF"
+    },
+    {
+      "name": "BROWN Nathaniel",
+      "position": "DF"
+    },
+    {
+      "name": "SANE Leroy",
+      "position": "MF"
+    },
+    {
+      "name": "AMIRI Nadiem",
+      "position": "MF"
+    },
+    {
+      "name": "NUEBEL Alexander",
+      "position": "GK"
+    },
+    {
+      "name": "RAUM David",
+      "position": "DF"
+    },
+    {
+      "name": "NMECHA Felix",
+      "position": "MF"
+    },
+    {
+      "name": "THIAW Malick",
+      "position": "DF"
+    },
+    {
+      "name": "OUEDRAOGO Assan",
+      "position": "MF"
+    },
+    {
+      "name": "UNDAV Deniz",
+      "position": "FW"
+    }
+  ],
+  "Ghana 2026": [
+    {
+      "name": "ZIGI Lawrence Ati",
+      "position": "GK"
+    },
+    {
+      "name": "SEIDU Alidu",
+      "position": "DF"
+    },
+    {
+      "name": "YIRENKYI Caleb",
+      "position": "MF"
+    },
+    {
+      "name": "ADJETEY Jonas",
+      "position": "DF"
+    },
+    {
+      "name": "PARTEY Thomas",
+      "position": "MF"
+    },
+    {
+      "name": "MUMIN Abdul",
+      "position": "DF"
+    },
+    {
+      "name": "FATAWU Abdul",
+      "position": "FW"
+    },
+    {
+      "name": "SIBO Kwasi",
+      "position": "MF"
+    },
+    {
+      "name": "AYEW Jordan",
+      "position": "FW"
+    },
+    {
+      "name": "THOMAS-ASANTE Brandon",
+      "position": "FW"
+    },
+    {
+      "name": "SEMENYO Antoine",
+      "position": "MF"
+    },
+    {
+      "name": "ANANG Joseph",
+      "position": "GK"
+    },
+    {
+      "name": "BAAH Christopher Bonsu",
+      "position": "FW"
+    },
+    {
+      "name": "MENSAH Gideon",
+      "position": "DF"
+    },
+    {
+      "name": "OWUSU Elisha",
+      "position": "MF"
+    },
+    {
+      "name": "ASARE Benjamin",
+      "position": "GK"
+    },
+    {
+      "name": "RAHMAN Baba",
+      "position": "DF"
+    },
+    {
+      "name": "OPOKU Jerome",
+      "position": "DF"
+    },
+    {
+      "name": "WILLIAMS Inaki",
+      "position": "FW"
+    },
+    {
+      "name": "BOAKYE Augustine",
+      "position": "MF"
+    },
+    {
+      "name": "OPPONG Kojo Peprah",
+      "position": "DF"
+    },
+    {
+      "name": "SULEMANA Kamaldeen",
+      "position": "FW"
+    },
+    {
+      "name": "LUCKASSEN Derrick",
+      "position": "DF"
+    },
+    {
+      "name": "NUAMAH Ernest",
+      "position": "FW"
+    },
+    {
+      "name": "ADU Prince",
+      "position": "FW"
+    },
+    {
+      "name": "SENAYA Marvin",
+      "position": "DF"
+    }
+  ],
+  "Haiti 2026": [
+    {
+      "name": "PLACIDE Johny",
+      "position": "GK"
+    },
+    {
+      "name": "ARCUS Carlens",
+      "position": "DF"
+    },
+    {
+      "name": "THERMONCY Keeto",
+      "position": "DF"
+    },
+    {
+      "name": "ADE Ricardo",
+      "position": "DF"
+    },
+    {
+      "name": "DELCROIX Hannes",
+      "position": "DF"
+    },
+    {
+      "name": "SAINTE Carl",
+      "position": "MF"
+    },
+    {
+      "name": "ETIENNE Derrick",
+      "position": "FW"
+    },
+    {
+      "name": "EXPERIENCE Martin",
+      "position": "DF"
+    },
+    {
+      "name": "NAZON Duckens",
+      "position": "FW"
+    },
+    {
+      "name": "BELLEGARDE Jean-Ricner",
+      "position": "MF"
+    },
+    {
+      "name": "DEEDSON Louicius",
+      "position": "FW"
+    },
+    {
+      "name": "PIERRE Alexandre",
+      "position": "GK"
+    },
+    {
+      "name": "LACROIX Markhus",
+      "position": "DF"
+    },
+    {
+      "name": "PIERRE Leverton",
+      "position": "MF"
+    },
+    {
+      "name": "PROVIDENCE Ruben",
+      "position": "FW"
+    },
+    {
+      "name": "JOSEPH Lenny",
+      "position": "FW"
+    },
+    {
+      "name": "JEAN JACQUES Danley",
+      "position": "MF"
+    },
+    {
+      "name": "ISIDOR Wilson",
+      "position": "FW"
+    },
+    {
+      "name": "FORTUNE Yassin",
+      "position": "FW"
+    },
+    {
+      "name": "PIERROT Frantzdy",
+      "position": "FW"
+    },
+    {
+      "name": "CASIMIR Josue",
+      "position": "FW"
+    },
+    {
+      "name": "DUVERNE Jean-Kevin",
+      "position": "DF"
+    },
+    {
+      "name": "DUVERGER Josue",
+      "position": "GK"
+    },
+    {
+      "name": "PAUGAIN Wilguens",
+      "position": "DF"
+    },
+    {
+      "name": "SIMON Dominique",
+      "position": "MF"
+    },
+    {
+      "name": "PIERRE Woodensky",
+      "position": "MF"
+    }
+  ],
+  "IR Iran 2026": [
+    {
+      "name": "BEIRANVAND Alireza",
+      "position": "GK"
+    },
+    {
+      "name": "HARDANI Saleh",
+      "position": "DF"
+    },
+    {
+      "name": "HAJISAFI Ehsan",
+      "position": "DF"
+    },
+    {
+      "name": "KHALILZADEH Shoja",
+      "position": "DF"
+    },
+    {
+      "name": "MOHAMMADI Milad",
+      "position": "DF"
+    },
+    {
+      "name": "EZATOLAHI Saeid",
+      "position": "MF"
+    },
+    {
+      "name": "JAHANBAKHSH Alireza",
+      "position": "MF"
+    },
+    {
+      "name": "MOHEBBI Mohammad",
+      "position": "MF"
+    },
+    {
+      "name": "TAREMI Mehdi",
+      "position": "FW"
+    },
+    {
+      "name": "GHAYEDI Mehdi",
+      "position": "FW"
+    },
+    {
+      "name": "ALIPOUR Ali",
+      "position": "FW"
+    },
+    {
+      "name": "NIAZMAND Payam",
+      "position": "GK"
+    },
+    {
+      "name": "KANANI Hossein",
+      "position": "DF"
+    },
+    {
+      "name": "GHODDOS Saman",
+      "position": "MF"
+    },
+    {
+      "name": "CHESHMI Roozbeh",
+      "position": "MF"
+    },
+    {
+      "name": "TORABI Mehdi",
+      "position": "MF"
+    },
+    {
+      "name": "YOUSEFI Arya",
+      "position": "DF"
+    },
+    {
+      "name": "HOSSEINZADEH Amirhossein",
+      "position": "FW"
+    },
+    {
+      "name": "NEMATI Ali",
+      "position": "DF"
+    },
+    {
+      "name": "MOGHANLOO Shahriyar",
+      "position": "FW"
+    },
+    {
+      "name": "GHORBANI Mohammad",
+      "position": "MF"
+    },
+    {
+      "name": "HOSSEINI Hossein",
+      "position": "GK"
+    },
+    {
+      "name": "REZAEIAN Ramin",
+      "position": "DF"
+    },
+    {
+      "name": "DARGAHI Dennis",
+      "position": "FW"
+    },
+    {
+      "name": "IRI Danial",
+      "position": "DF"
+    },
+    {
+      "name": "RAZAGHINIA Amirmohammad",
+      "position": "MF"
+    }
+  ],
+  "Iraq 2026": [
+    {
+      "name": "FAHAD TALIB",
+      "position": "GK"
+    },
+    {
+      "name": "REBIN SULAKA",
+      "position": "DF"
+    },
+    {
+      "name": "HUSSEIN ALI",
+      "position": "DF"
+    },
+    {
+      "name": "ZAID TAHSEEN",
+      "position": "DF"
+    },
+    {
+      "name": "AKAM HASHIM",
+      "position": "DF"
+    },
+    {
+      "name": "MUNAF YOUNUS",
+      "position": "DF"
+    },
+    {
+      "name": "YOUSSEF AMYN",
+      "position": "MF"
+    },
+    {
+      "name": "IBRAHIM BAYESH",
+      "position": "MF"
+    },
+    {
+      "name": "ALI ALHAMADI",
+      "position": "FW"
+    },
+    {
+      "name": "MOHANAD ALI",
+      "position": "FW"
+    },
+    {
+      "name": "AHMED QASIM",
+      "position": "FW"
+    },
+    {
+      "name": "JALAL HASSAN",
+      "position": "GK"
+    },
+    {
+      "name": "ALI YOUSIF",
+      "position": "FW"
+    },
+    {
+      "name": "ZIDANE IQBAL",
+      "position": "MF"
+    },
+    {
+      "name": "AHMED MAKNAZI",
+      "position": "DF"
+    },
+    {
+      "name": "AMIR ALAMMARI",
+      "position": "MF"
+    },
+    {
+      "name": "ALI JASIM",
+      "position": "FW"
+    },
+    {
+      "name": "AYMEN HUSSEIN",
+      "position": "FW"
+    },
+    {
+      "name": "KEVIN YAKOB",
+      "position": "MF"
+    },
+    {
+      "name": "AIMAR SHER",
+      "position": "MF"
+    },
+    {
+      "name": "MARKO FARJI",
+      "position": "FW"
+    },
+    {
+      "name": "AHMED BASIL",
+      "position": "GK"
+    },
+    {
+      "name": "MERCHAS DOSKI",
+      "position": "DF"
+    },
+    {
+      "name": "ZAID ISMAEL",
+      "position": "MF"
+    },
+    {
+      "name": "MUSTAFA SAADOON",
+      "position": "DF"
+    },
+    {
+      "name": "FRANS PUTROS",
+      "position": "DF"
+    }
+  ],
+  "Japan 2026": [
+    {
+      "name": "SUZUKI Zion",
+      "position": "GK"
+    },
+    {
+      "name": "SUGAWARA Yukinari",
+      "position": "DF"
+    },
+    {
+      "name": "TANIGUCHI Shogo",
+      "position": "DF"
+    },
+    {
+      "name": "ITAKURA Kou",
+      "position": "DF"
+    },
+    {
+      "name": "NAGATOMO Yuto",
+      "position": "DF"
+    },
+    {
+      "name": "ENDO Wataru",
+      "position": "MF"
+    },
+    {
+      "name": "TANAKA Ao",
+      "position": "MF"
+    },
+    {
+      "name": "KUBO Takefusa",
+      "position": "MF"
+    },
+    {
+      "name": "GOTO Keisuke",
+      "position": "FW"
+    },
+    {
+      "name": "DOAN Ritsu",
+      "position": "MF"
+    },
+    {
+      "name": "MAEDA Daizen",
+      "position": "MF"
+    },
+    {
+      "name": "OSAKO Keisuke",
+      "position": "GK"
+    },
+    {
+      "name": "NAKAMURA Keito",
+      "position": "MF"
+    },
+    {
+      "name": "ITO Junya",
+      "position": "MF"
+    },
+    {
+      "name": "KAMADA Daichi",
+      "position": "MF"
+    },
+    {
+      "name": "WATANABE Tsuyoshi",
+      "position": "DF"
+    },
+    {
+      "name": "SUZUKI Yuito",
+      "position": "MF"
+    },
+    {
+      "name": "UEDA Ayase",
+      "position": "FW"
+    },
+    {
+      "name": "OGAWA Koki",
+      "position": "FW"
+    },
+    {
+      "name": "SEKO Ayumu",
+      "position": "DF"
+    },
+    {
+      "name": "ITO Hiroki",
+      "position": "DF"
+    },
+    {
+      "name": "TOMIYASU Takehiro",
+      "position": "DF"
+    },
+    {
+      "name": "HAYAKAWA Tomoki",
+      "position": "GK"
+    },
+    {
+      "name": "SANO Kaishu",
+      "position": "MF"
+    },
+    {
+      "name": "SUZUKI Junnosuke",
+      "position": "DF"
+    },
+    {
+      "name": "SHIOGAI Kento",
+      "position": "FW"
+    }
+  ],
+  "Jordan 2026": [
+    {
+      "name": "YAZEED ABULAILA",
+      "position": "GK"
+    },
+    {
+      "name": "MOHAMMAD ABUHASHEESH",
+      "position": "DF"
+    },
+    {
+      "name": "ABDALLAH NASIB",
+      "position": "DF"
+    },
+    {
+      "name": "HUSAM ABUDAHAB",
+      "position": "DF"
+    },
+    {
+      "name": "YAZAN ALARAB",
+      "position": "DF"
+    },
+    {
+      "name": "AMER JAMOUS",
+      "position": "MF"
+    },
+    {
+      "name": "MOHAMMAD ABUZRAIQ",
+      "position": "FW"
+    },
+    {
+      "name": "NOOR ALRAWABDEH",
+      "position": "MF"
+    },
+    {
+      "name": "ALI OLWAN",
+      "position": "FW"
+    },
+    {
+      "name": "MOUSA ALTAMARI",
+      "position": "FW"
+    },
+    {
+      "name": "ODEH FAKHOURY",
+      "position": "FW"
+    },
+    {
+      "name": "NOUR BANIATEYAH",
+      "position": "GK"
+    },
+    {
+      "name": "MAHMOUD ALMARDI",
+      "position": "FW"
+    },
+    {
+      "name": "RAJAEI AYED",
+      "position": "MF"
+    },
+    {
+      "name": "IBRAHIM SADEH",
+      "position": "MF"
+    },
+    {
+      "name": "MOHAMMAD ABUALNADI",
+      "position": "DF"
+    },
+    {
+      "name": "SALEEM OBAID",
+      "position": "DF"
+    },
+    {
+      "name": "MOHAMMAD ABUGHOUSH",
+      "position": "MF"
+    },
+    {
+      "name": "SAED ALROSAN",
+      "position": "DF"
+    },
+    {
+      "name": "MOHANNAD ABUTAHA",
+      "position": "MF"
+    },
+    {
+      "name": "NIZAR ALRASHDAN",
+      "position": "MF"
+    },
+    {
+      "name": "ABDALLAH ALFAKHORI",
+      "position": "GK"
+    },
+    {
+      "name": "EHSAN HADDAD",
+      "position": "DF"
+    },
+    {
+      "name": "ALI AZAIZEH",
+      "position": "FW"
+    },
+    {
+      "name": "MOHAMMAD ALDAOUD",
+      "position": "MF"
+    },
+    {
+      "name": "ANAS BADAWI",
+      "position": "DF"
+    }
+  ],
+  "Korea Republic 2026": [
+    {
+      "name": "KIM Seunggyu",
+      "position": "GK"
+    },
+    {
+      "name": "LEE Hanbeom",
+      "position": "DF"
+    },
+    {
+      "name": "LEE Gihyuk",
+      "position": "MF"
+    },
+    {
+      "name": "KIM Minjae",
+      "position": "DF"
+    },
+    {
+      "name": "KIM Taehyeon",
+      "position": "DF"
+    },
+    {
+      "name": "HWANG Inbeom",
+      "position": "MF"
+    },
+    {
+      "name": "SON Heungmin",
+      "position": "FW"
+    },
+    {
+      "name": "PAIK Seungho",
+      "position": "MF"
+    },
+    {
+      "name": "CHO Guesung",
+      "position": "FW"
+    },
+    {
+      "name": "LEE Jaesung",
+      "position": "MF"
+    },
+    {
+      "name": "HWANG Heechan",
+      "position": "MF"
+    },
+    {
+      "name": "SONG Bumkeun",
+      "position": "GK"
+    },
+    {
+      "name": "LEE Taeseok",
+      "position": "DF"
+    },
+    {
+      "name": "CHO Wije",
+      "position": "DF"
+    },
+    {
+      "name": "KIM Moonhwan",
+      "position": "DF"
+    },
+    {
+      "name": "PARK Jinseob",
+      "position": "DF"
+    },
+    {
+      "name": "BAE Junho",
+      "position": "MF"
+    },
+    {
+      "name": "OH Hyeongyu",
+      "position": "FW"
+    },
+    {
+      "name": "LEE Kangin",
+      "position": "MF"
+    },
+    {
+      "name": "YANG Hyunjun",
+      "position": "MF"
+    },
+    {
+      "name": "JO Hyeonwoo",
+      "position": "GK"
+    },
+    {
+      "name": "SEOL Youngwoo",
+      "position": "DF"
+    },
+    {
+      "name": "CASTROP Jens",
+      "position": "DF"
+    },
+    {
+      "name": "KIM Jingyu",
+      "position": "MF"
+    },
+    {
+      "name": "EOM Jisung",
+      "position": "MF"
+    },
+    {
+      "name": "LEE Donggyeong",
+      "position": "MF"
+    }
+  ],
+  "Mexico 2026": [
+    {
+      "name": "RANGEL Raul",
+      "position": "GK"
+    },
+    {
+      "name": "SANCHEZ Jorge",
+      "position": "DF"
+    },
+    {
+      "name": "MONTES Cesar",
+      "position": "DF"
+    },
+    {
+      "name": "ALVAREZ Edson",
+      "position": "DF"
+    },
+    {
+      "name": "VASQUEZ Johan",
+      "position": "DF"
+    },
+    {
+      "name": "LIRA Erik",
+      "position": "MF"
+    },
+    {
+      "name": "ROMO Luis",
+      "position": "MF"
+    },
+    {
+      "name": "FIDALGO Alvaro",
+      "position": "MF"
+    },
+    {
+      "name": "JIMENEZ Raul",
+      "position": "FW"
+    },
+    {
+      "name": "VEGA Alexis",
+      "position": "FW"
+    },
+    {
+      "name": "GIMENEZ Santiago",
+      "position": "FW"
+    },
+    {
+      "name": "ACEVEDO Carlos",
+      "position": "GK"
+    },
+    {
+      "name": "OCHOA Guillermo",
+      "position": "GK"
+    },
+    {
+      "name": "GONZALEZ Armando",
+      "position": "FW"
+    },
+    {
+      "name": "REYES Israel",
+      "position": "DF"
+    },
+    {
+      "name": "QUINONES Julian",
+      "position": "FW"
+    },
+    {
+      "name": "PINEDA Orbelin",
+      "position": "MF"
+    },
+    {
+      "name": "VARGAS Obed",
+      "position": "MF"
+    },
+    {
+      "name": "MORA Gilberto",
+      "position": "MF"
+    },
+    {
+      "name": "CHAVEZ Mateo",
+      "position": "DF"
+    },
+    {
+      "name": "HUERTA Cesar",
+      "position": "FW"
+    },
+    {
+      "name": "MARTINEZ Guillermo",
+      "position": "FW"
+    },
+    {
+      "name": "GALLARDO Jesus",
+      "position": "DF"
+    },
+    {
+      "name": "CHAVEZ Luis",
+      "position": "MF"
+    },
+    {
+      "name": "ALVARADO Roberto",
+      "position": "FW"
+    },
+    {
+      "name": "GUTIERREZ Brian",
+      "position": "MF"
+    }
+  ],
+  "Morocco 2026": [
+    {
+      "name": "BOUNOU Yassine",
+      "position": "GK"
+    },
+    {
+      "name": "HAKIMI Achraf",
+      "position": "DF"
+    },
+    {
+      "name": "MAZRAOUI Noussair",
+      "position": "DF"
+    },
+    {
+      "name": "AMRABAT Sofyan",
+      "position": "MF"
+    },
+    {
+      "name": "AGUERD Nayef",
+      "position": "DF"
+    },
+    {
+      "name": "BOUADDI Ayyoub",
+      "position": "MF"
+    },
+    {
+      "name": "TALBI Chemsdine",
+      "position": "MF"
+    },
+    {
+      "name": "OUNAHI Azzedine",
+      "position": "MF"
+    },
+    {
+      "name": "RAHIMI Sou«ane",
+      "position": "FW"
+    },
+    {
+      "name": "DIAZ Brahim",
+      "position": "FW"
+    },
+    {
+      "name": "SAIBARI Ismael",
+      "position": "MF"
+    },
+    {
+      "name": "EL KAJOUI Munir",
+      "position": "GK"
+    },
+    {
+      "name": "EL OUAHDI Zakaria",
+      "position": "DF"
+    },
+    {
+      "name": "DIOP Issa",
+      "position": "DF"
+    },
+    {
+      "name": "EL MOURABET Samir",
+      "position": "MF"
+    },
+    {
+      "name": "YASSINE Gessime",
+      "position": "MF"
+    },
+    {
+      "name": "EZZALZOULI Abde",
+      "position": "FW"
+    },
+    {
+      "name": "RIAD Chadi",
+      "position": "DF"
+    },
+    {
+      "name": "BELAMMARI Youssef",
+      "position": "DF"
+    },
+    {
+      "name": "EL KAABI Ayoub",
+      "position": "FW"
+    },
+    {
+      "name": "AMAIMOUNI Ayoube",
+      "position": "FW"
+    },
+    {
+      "name": "TAGNAOUTI Ahmed Reda",
+      "position": "GK"
+    },
+    {
+      "name": "EL KHANNOUSS Bilal",
+      "position": "MF"
+    },
+    {
+      "name": "EL AYNAOUI Neil",
+      "position": "MF"
+    },
+    {
+      "name": "HALHAL Redouane",
+      "position": "DF"
+    },
+    {
+      "name": "SALAH EDDINE Anass",
+      "position": "DF"
+    }
+  ],
+  "Netherlands 2026": [
+    {
+      "name": "VERBRUGGEN Bart",
+      "position": "GK"
+    },
+    {
+      "name": "GEERTRUIDA Lutsharel",
+      "position": "DF"
+    },
+    {
+      "name": "DE ROON Marten",
+      "position": "MF"
+    },
+    {
+      "name": "VAN DIJK Virgil",
+      "position": "DF"
+    },
+    {
+      "name": "AKE Nathan",
+      "position": "DF"
+    },
+    {
+      "name": "VAN HECKE Jan Paul",
+      "position": "DF"
+    },
+    {
+      "name": "KLUIVERT Justin",
+      "position": "MF"
+    },
+    {
+      "name": "GRAVENBERCH Ryan",
+      "position": "MF"
+    },
+    {
+      "name": "WEGHORST Wout",
+      "position": "FW"
+    },
+    {
+      "name": "DEPAY Memphis",
+      "position": "FW"
+    },
+    {
+      "name": "GAKPO Cody",
+      "position": "FW"
+    },
+    {
+      "name": "WIEFFER Mats",
+      "position": "DF"
+    },
+    {
+      "name": "ROEFS Robin",
+      "position": "GK"
+    },
+    {
+      "name": "REIJNDERS Tijjani",
+      "position": "MF"
+    },
+    {
+      "name": "VAN DE VEN Micky",
+      "position": "DF"
+    },
+    {
+      "name": "TIL Guus",
+      "position": "MF"
+    },
+    {
+      "name": "LANG Noa",
+      "position": "FW"
+    },
+    {
+      "name": "MALEN Donyell",
+      "position": "FW"
+    },
+    {
+      "name": "BROBBEY Brian",
+      "position": "FW"
+    },
+    {
+      "name": "KOOPMEINERS Teun",
+      "position": "MF"
+    },
+    {
+      "name": "DE JONG Frenkie",
+      "position": "MF"
+    },
+    {
+      "name": "DUMFRIES Denzel",
+      "position": "DF"
+    },
+    {
+      "name": "FLEKKEN Mark",
+      "position": "GK"
+    },
+    {
+      "name": "SUMMERVILLE Crysencio",
+      "position": "FW"
+    },
+    {
+      "name": "HATO Jorrel",
+      "position": "DF"
+    },
+    {
+      "name": "TIMBER Quinten",
+      "position": "MF"
+    }
+  ],
+  "New Zealand 2026": [
+    {
+      "name": "CROCOMBE Max",
+      "position": "GK"
+    },
+    {
+      "name": "PAYNE Tim",
+      "position": "DF"
+    },
+    {
+      "name": "DE VRIES Francis",
+      "position": "DF"
+    },
+    {
+      "name": "BINDON Tyler",
+      "position": "DF"
+    },
+    {
+      "name": "BOXALL Michael",
+      "position": "DF"
+    },
+    {
+      "name": "BELL Joe",
+      "position": "MF"
+    },
+    {
+      "name": "GARBETT Matthew",
+      "position": "MF"
+    },
+    {
+      "name": "STAMENIC Marko",
+      "position": "MF"
+    },
+    {
+      "name": "WOOD Chris",
+      "position": "FW"
+    },
+    {
+      "name": "SINGH Sarpreet",
+      "position": "MF"
+    },
+    {
+      "name": "JUST Elijah",
+      "position": "MF"
+    },
+    {
+      "name": "PAULSEN Alex",
+      "position": "GK"
+    },
+    {
+      "name": "CACACE Liberato",
+      "position": "DF"
+    },
+    {
+      "name": "RUFER Alex",
+      "position": "MF"
+    },
+    {
+      "name": "PIJNAKER Nando",
+      "position": "DF"
+    },
+    {
+      "name": "SURMAN Finn",
+      "position": "DF"
+    },
+    {
+      "name": "BARBAROUSES Kosta",
+      "position": "FW"
+    },
+    {
+      "name": "WAINE Ben",
+      "position": "FW"
+    },
+    {
+      "name": "OLD Ben",
+      "position": "MF"
+    },
+    {
+      "name": "McCOWATT Callum",
+      "position": "MF"
+    },
+    {
+      "name": "RANDALL Jesse",
+      "position": "FW"
+    },
+    {
+      "name": "WOUD Michael",
+      "position": "GK"
+    },
+    {
+      "name": "THOMAS Ryan",
+      "position": "MF"
+    },
+    {
+      "name": "ELLIOT Callan",
+      "position": "DF"
+    },
+    {
+      "name": "BAYLISS Lachlan",
+      "position": "MF"
+    },
+    {
+      "name": "SMITH Tommy",
+      "position": "DF"
+    }
+  ],
+  "Norway 2026": [
+    {
+      "name": "NYLAND Orjan",
+      "position": "GK"
+    },
+    {
+      "name": "THORSBY Morten",
+      "position": "MF"
+    },
+    {
+      "name": "AJER Kristoffer",
+      "position": "DF"
+    },
+    {
+      "name": "OSTIGARD Leo",
+      "position": "DF"
+    },
+    {
+      "name": "MOLLER WOLFE David",
+      "position": "DF"
+    },
+    {
+      "name": "BERG Patrick",
+      "position": "MF"
+    },
+    {
+      "name": "SORLOTH Alexander",
+      "position": "FW"
+    },
+    {
+      "name": "BERGE Sander",
+      "position": "MF"
+    },
+    {
+      "name": "HAALAND Erling",
+      "position": "FW"
+    },
+    {
+      "name": "ODEGAARD Martin",
+      "position": "MF"
+    },
+    {
+      "name": "STRAND LARSEN Jorgen",
+      "position": "FW"
+    },
+    {
+      "name": "TANGVIK Sander",
+      "position": "GK"
+    },
+    {
+      "name": "SELVIK Egil",
+      "position": "GK"
+    },
+    {
+      "name": "AURSNES Fredrik",
+      "position": "MF"
+    },
+    {
+      "name": "BJORKAN Fredrik Andre",
+      "position": "DF"
+    },
+    {
+      "name": "HOLMGREN PEDERSEN Marcus",
+      "position": "DF"
+    },
+    {
+      "name": "HEGGEM Torbjorn",
+      "position": "DF"
+    },
+    {
+      "name": "THORSTVEDT Kristian",
+      "position": "MF"
+    },
+    {
+      "name": "AASGAARD Thelo",
+      "position": "MF"
+    },
+    {
+      "name": "NUSA Antonio",
+      "position": "FW"
+    },
+    {
+      "name": "SCHJELDERUP Andreas",
+      "position": "MF"
+    },
+    {
+      "name": "BOBB Oscar",
+      "position": "MF"
+    },
+    {
+      "name": "HAUGE Jens Petter",
+      "position": "MF"
+    },
+    {
+      "name": "LANGAS Sondre",
+      "position": "DF"
+    },
+    {
+      "name": "FALCHENER Henrik",
+      "position": "DF"
+    },
+    {
+      "name": "RYERSON Julian",
+      "position": "FW"
+    }
+  ],
+  "Panama 2026": [
+    {
+      "name": "MEJIA Luis",
+      "position": "GK"
+    },
+    {
+      "name": "BLACKMAN Cesar",
+      "position": "DF"
+    },
+    {
+      "name": "CORDOBA Jose",
+      "position": "DF"
+    },
+    {
+      "name": "ESCOBAR Fidel",
+      "position": "DF"
+    },
+    {
+      "name": "FARINA Edgardo",
+      "position": "DF"
+    },
+    {
+      "name": "MARTINEZ Cristian",
+      "position": "MF"
+    },
+    {
+      "name": "RODRIGUEZ Jose Luis",
+      "position": "MF"
+    },
+    {
+      "name": "CARRASQUILLA Adalberto",
+      "position": "MF"
+    },
+    {
+      "name": "RODRIGUEZ Tomas",
+      "position": "FW"
+    },
+    {
+      "name": "DIAZ Ismael",
+      "position": "MF"
+    },
+    {
+      "name": "BARCENAS Edgar Yoel",
+      "position": "MF"
+    },
+    {
+      "name": "SAMUDIO Cesar",
+      "position": "GK"
+    },
+    {
+      "name": "RAMOS Jiovany",
+      "position": "DF"
+    },
+    {
+      "name": "HARVEY Carlos",
+      "position": "DF"
+    },
+    {
+      "name": "DAVIS Eric",
+      "position": "DF"
+    },
+    {
+      "name": "ANDRADE Andres",
+      "position": "DF"
+    },
+    {
+      "name": "FAJARDO Jose",
+      "position": "FW"
+    },
+    {
+      "name": "WATERMAN Cecilio",
+      "position": "FW"
+    },
+    {
+      "name": "QUINTERO Alberto",
+      "position": "MF"
+    },
+    {
+      "name": "GODOY Anibal",
+      "position": "MF"
+    },
+    {
+      "name": "YANIS Cesar",
+      "position": "MF"
+    },
+    {
+      "name": "MOSQUERA Orlando",
+      "position": "GK"
+    },
+    {
+      "name": "MURILLO Amir",
+      "position": "DF"
+    },
+    {
+      "name": "LONDONO Azarias",
+      "position": "FW"
+    },
+    {
+      "name": "MILLER Roderick",
+      "position": "DF"
+    },
+    {
+      "name": "GUTIERREZ Jorge",
+      "position": "DF"
+    }
+  ],
+  "Paraguay 2026": [
+    {
+      "name": "FERNANDEZ Gatito",
+      "position": "GK"
+    },
+    {
+      "name": "VELAZQUEZ Gustavo",
+      "position": "DF"
+    },
+    {
+      "name": "ALDERETE Omar",
+      "position": "DF"
+    },
+    {
+      "name": "CACERES Juan Jose",
+      "position": "DF"
+    },
+    {
+      "name": "BALBUENA Fabian",
+      "position": "DF"
+    },
+    {
+      "name": "ALONSO Junior",
+      "position": "DF"
+    },
+    {
+      "name": "SOSA Ramon",
+      "position": "MF"
+    },
+    {
+      "name": "GOMEZ Diego",
+      "position": "MF"
+    },
+    {
+      "name": "SANABRIA Antonio",
+      "position": "FW"
+    },
+    {
+      "name": "ALMIRON Miguel",
+      "position": "MF"
+    },
+    {
+      "name": "MAURICIO",
+      "position": "MF"
+    },
+    {
+      "name": "GILL Orlando",
+      "position": "GK"
+    },
+    {
+      "name": "CANALE Jose",
+      "position": "DF"
+    },
+    {
+      "name": "CUBAS Andres",
+      "position": "MF"
+    },
+    {
+      "name": "GOMEZ Gustavo",
+      "position": "DF"
+    },
+    {
+      "name": "BOBADILLA Damian",
+      "position": "MF"
+    },
+    {
+      "name": "ROMERO GAMARRA Alejandro",
+      "position": "FW"
+    },
+    {
+      "name": "ARCE Alex",
+      "position": "FW"
+    },
+    {
+      "name": "ENCISO Julio",
+      "position": "FW"
+    },
+    {
+      "name": "OJEDA Braian",
+      "position": "MF"
+    },
+    {
+      "name": "AVALOS Gabriel",
+      "position": "FW"
+    },
+    {
+      "name": "OLVEIRA Gaston",
+      "position": "GK"
+    },
+    {
+      "name": "GALARZA Matias",
+      "position": "MF"
+    },
+    {
+      "name": "CABALLERO Gustavo",
+      "position": "MF"
+    },
+    {
+      "name": "PITTA Isidro",
+      "position": "FW"
+    },
+    {
+      "name": "MAIDANA Alexandro",
+      "position": "DF"
+    }
+  ],
+  "Portugal 2026": [
+    {
+      "name": "DIOGO COSTA",
+      "position": "GK"
+    },
+    {
+      "name": "NELSON SEMEDO",
+      "position": "DF"
+    },
+    {
+      "name": "RUBEN DIAS",
+      "position": "DF"
+    },
+    {
+      "name": "TOMAS ARAUJO",
+      "position": "DF"
+    },
+    {
+      "name": "DIOGO DALOT",
+      "position": "DF"
+    },
+    {
+      "name": "MATHEUS NUNES",
+      "position": "MF"
+    },
+    {
+      "name": "CRISTIANO RONALDO",
+      "position": "FW"
+    },
+    {
+      "name": "BRUNO FERNANDES",
+      "position": "MF"
+    },
+    {
+      "name": "GONCALO RAMOS",
+      "position": "FW"
+    },
+    {
+      "name": "BERNARDO SILVA",
+      "position": "MF"
+    },
+    {
+      "name": "JOAO FELIX",
+      "position": "FW"
+    },
+    {
+      "name": "JOSE SA",
+      "position": "GK"
+    },
+    {
+      "name": "RENATO VEIGA",
+      "position": "DF"
+    },
+    {
+      "name": "GONCALO INACIO",
+      "position": "DF"
+    },
+    {
+      "name": "JOAO NEVES",
+      "position": "MF"
+    },
+    {
+      "name": "FRANCISCO TRINCAO",
+      "position": "FW"
+    },
+    {
+      "name": "RAFAEL LEAO",
+      "position": "FW"
+    },
+    {
+      "name": "PEDRO NETO",
+      "position": "FW"
+    },
+    {
+      "name": "GONCALO GUEDES",
+      "position": "FW"
+    },
+    {
+      "name": "JOAO CANCELO",
+      "position": "DF"
+    },
+    {
+      "name": "RUBEN NEVES",
+      "position": "MF"
+    },
+    {
+      "name": "RUI SILVA",
+      "position": "GK"
+    },
+    {
+      "name": "VITINHA",
+      "position": "MF"
+    },
+    {
+      "name": "SAMU COSTA",
+      "position": "DF"
+    },
+    {
+      "name": "NUNO MENDES",
+      "position": "DF"
+    },
+    {
+      "name": "FRANCISCO CONCEICAO",
+      "position": "FW"
+    }
+  ],
+  "Qatar 2026": [
+    {
+      "name": "MAHMOUD ABUNADA",
+      "position": "GK"
+    },
+    {
+      "name": "PEDRO MIGUEL",
+      "position": "DF"
+    },
+    {
+      "name": "LUCAS MENDES",
+      "position": "DF"
+    },
+    {
+      "name": "ISSA LAYE",
+      "position": "DF"
+    },
+    {
+      "name": "JASSEM GABER",
+      "position": "DF"
+    },
+    {
+      "name": "ABDULAZIZ HATEM",
+      "position": "MF"
+    },
+    {
+      "name": "AHMED ALAAELDIN",
+      "position": "FW"
+    },
+    {
+      "name": "EDMILSON JUNIOR",
+      "position": "FW"
+    },
+    {
+      "name": "MOHAMMED MUNTARI",
+      "position": "FW"
+    },
+    {
+      "name": "HASSAN ALHAYDOS",
+      "position": "FW"
+    },
+    {
+      "name": "AKRAM AFIF",
+      "position": "FW"
+    },
+    {
+      "name": "KARIM BOUDIAF",
+      "position": "MF"
+    },
+    {
+      "name": "AYOUB ALOUI",
+      "position": "DF"
+    },
+    {
+      "name": "HOMAM AHMED",
+      "position": "DF"
+    },
+    {
+      "name": "YUSUF ABDURISAG",
+      "position": "FW"
+    },
+    {
+      "name": "BOUALEM KHOUKHI",
+      "position": "DF"
+    },
+    {
+      "name": "AHMED ALGANEHI",
+      "position": "MF"
+    },
+    {
+      "name": "SULTAN ALBRAKE",
+      "position": "DF"
+    },
+    {
+      "name": "ALMOEZ ALI",
+      "position": "FW"
+    },
+    {
+      "name": "AHMED FATHY",
+      "position": "MF"
+    },
+    {
+      "name": "SALAH ZAKARIA",
+      "position": "GK"
+    },
+    {
+      "name": "MESHAAL BARSHAM",
+      "position": "GK"
+    },
+    {
+      "name": "ASSIM MADIBO",
+      "position": "MF"
+    },
+    {
+      "name": "TAHSIN MOHAMMED",
+      "position": "FW"
+    },
+    {
+      "name": "ALHASHMI ALHUSSEIN",
+      "position": "DF"
+    },
+    {
+      "name": "MOHAMED MANAI",
+      "position": "FW"
+    }
+  ],
+  "Saudi Arabia 2026": [
+    {
+      "name": "NAWAF ALAQIDI",
+      "position": "GK"
+    },
+    {
+      "name": "ALI MAJRASHI",
+      "position": "DF"
+    },
+    {
+      "name": "ALI LAJAMI",
+      "position": "DF"
+    },
+    {
+      "name": "ABDULELAH ALAMRI",
+      "position": "DF"
+    },
+    {
+      "name": "HASSAN ALTAMBAKTI",
+      "position": "DF"
+    },
+    {
+      "name": "NASSER ALDAWSARI",
+      "position": "MF"
+    },
+    {
+      "name": "MUSAB ALJUWAYR",
+      "position": "MF"
+    },
+    {
+      "name": "AIMAN YAHYA",
+      "position": "FW"
+    },
+    {
+      "name": "FERAS ALBRIKAN",
+      "position": "FW"
+    },
+    {
+      "name": "SALEM ALDAWSARI",
+      "position": "FW"
+    },
+    {
+      "name": "SALEH ALSHEHRI",
+      "position": "FW"
+    },
+    {
+      "name": "SAUD ABDULHAMID",
+      "position": "DF"
+    },
+    {
+      "name": "NAWAF BU WASHL",
+      "position": "DF"
+    },
+    {
+      "name": "HASSAN KADISH",
+      "position": "DF"
+    },
+    {
+      "name": "ABDULLAH ALKHAIBARI",
+      "position": "MF"
+    },
+    {
+      "name": "ZIYAD ALJOHANI",
+      "position": "MF"
+    },
+    {
+      "name": "KHALID ALGHANNAM",
+      "position": "FW"
+    },
+    {
+      "name": "ALA ALHAJJI",
+      "position": "MF"
+    },
+    {
+      "name": "ABDULLAH ALHAMDDAN",
+      "position": "FW"
+    },
+    {
+      "name": "SULTAN MANDASH",
+      "position": "FW"
+    },
+    {
+      "name": "MOHAMMED ALOWAIS",
+      "position": "GK"
+    },
+    {
+      "name": "AHMED ALKASSAR",
+      "position": "GK"
+    },
+    {
+      "name": "MOHAMED KANNO",
+      "position": "MF"
+    },
+    {
+      "name": "MOTEB ALHARBI",
+      "position": "DF"
+    },
+    {
+      "name": "JEHAD THIKRI",
+      "position": "DF"
+    },
+    {
+      "name": "MOHAMMED ABU ALSHAMAT",
+      "position": "DF"
+    }
+  ],
+  "Scotland 2026": [
+    {
+      "name": "GUNN Angus",
+      "position": "GK"
+    },
+    {
+      "name": "HICKEY Aaron",
+      "position": "DF"
+    },
+    {
+      "name": "ROBERTSON Andy",
+      "position": "DF"
+    },
+    {
+      "name": "McTOMINAY Scott",
+      "position": "MF"
+    },
+    {
+      "name": "HANLEY Grant",
+      "position": "DF"
+    },
+    {
+      "name": "TIERNEY Kieran",
+      "position": "DF"
+    },
+    {
+      "name": "McGINN John",
+      "position": "MF"
+    },
+    {
+      "name": "FLETCHER Tyler",
+      "position": "MF"
+    },
+    {
+      "name": "DYKES Lyndon",
+      "position": "FW"
+    },
+    {
+      "name": "ADAMS Che",
+      "position": "FW"
+    },
+    {
+      "name": "CHRISTIE Ryan",
+      "position": "MF"
+    },
+    {
+      "name": "KELLY Liam",
+      "position": "GK"
+    },
+    {
+      "name": "HENDRY Jack",
+      "position": "DF"
+    },
+    {
+      "name": "STEWART Ross",
+      "position": "FW"
+    },
+    {
+      "name": "SOUTTAR John",
+      "position": "DF"
+    },
+    {
+      "name": "HYAM Dominic",
+      "position": "DF"
+    },
+    {
+      "name": "GANNON-DOAK Ben",
+      "position": "FW"
+    },
+    {
+      "name": "HIRST George",
+      "position": "FW"
+    },
+    {
+      "name": "FERGUSON Lewis",
+      "position": "MF"
+    },
+    {
+      "name": "SHANKLAND Lawrence",
+      "position": "FW"
+    },
+    {
+      "name": "GORDON Craig",
+      "position": "GK"
+    },
+    {
+      "name": "PATTERSON Nathan",
+      "position": "DF"
+    },
+    {
+      "name": "McLEAN Kenny",
+      "position": "MF"
+    },
+    {
+      "name": "RALSTON Anthony",
+      "position": "DF"
+    },
+    {
+      "name": "CURTIS Findlay",
+      "position": "FW"
+    },
+    {
+      "name": "McKENNA Scott",
+      "position": "DF"
+    }
+  ],
+  "Senegal 2026": [
+    {
+      "name": "DIOUF Yehvann",
+      "position": "GK"
+    },
+    {
+      "name": "SARR Mamadou",
+      "position": "DF"
+    },
+    {
+      "name": "KOULIBALY Kalidou",
+      "position": "DF"
+    },
+    {
+      "name": "SECK Abdoulaye",
+      "position": "DF"
+    },
+    {
+      "name": "GUEYE Idrissa Gana",
+      "position": "MF"
+    },
+    {
+      "name": "CISS Pathe",
+      "position": "MF"
+    },
+    {
+      "name": "DIAO Assane",
+      "position": "FW"
+    },
+    {
+      "name": "CAMARA Lamine",
+      "position": "MF"
+    },
+    {
+      "name": "DIENG Bamba",
+      "position": "FW"
+    },
+    {
+      "name": "MANE Sadio",
+      "position": "FW"
+    },
+    {
+      "name": "JACKSON Nicolas",
+      "position": "FW"
+    },
+    {
+      "name": "NDIAYE Cherif",
+      "position": "FW"
+    },
+    {
+      "name": "NDIAYE Iliman",
+      "position": "FW"
+    },
+    {
+      "name": "JAKOBS Ismail",
+      "position": "DF"
+    },
+    {
+      "name": "DIATTA Krepin",
+      "position": "DF"
+    },
+    {
+      "name": "MENDY Edouard",
+      "position": "GK"
+    },
+    {
+      "name": "SARR Pape Matar",
+      "position": "MF"
+    },
+    {
+      "name": "SARR Ismaila",
+      "position": "FW"
+    },
+    {
+      "name": "NIAKHATE Moussa",
+      "position": "DF"
+    },
+    {
+      "name": "MBAYE Ibrahim",
+      "position": "FW"
+    },
+    {
+      "name": "DIARRA Habib",
+      "position": "MF"
+    },
+    {
+      "name": "NDIAYE Bara Sapoko",
+      "position": "MF"
+    },
+    {
+      "name": "DIAW Mory",
+      "position": "GK"
+    },
+    {
+      "name": "MENDY Antoine",
+      "position": "DF"
+    },
+    {
+      "name": "DIOUF El Hadji Malick",
+      "position": "DF"
+    },
+    {
+      "name": "GUEYE Pape",
+      "position": "MF"
+    }
+  ],
+  "South Africa 2026": [
+    {
+      "name": "WILLIAMS Ronwen",
+      "position": "GK"
+    },
+    {
+      "name": "MATULUDI Thabang",
+      "position": "DF"
+    },
+    {
+      "name": "NDAMANE Khulumani",
+      "position": "DF"
+    },
+    {
+      "name": "MOKOENA Teboho",
+      "position": "MF"
+    },
+    {
+      "name": "MBATHA Thalente",
+      "position": "MF"
+    },
+    {
+      "name": "MODIBA Aubrey",
+      "position": "DF"
+    },
+    {
+      "name": "APPOLLIS Oswin",
+      "position": "FW"
+    },
+    {
+      "name": "MOREMI Tshepang",
+      "position": "FW"
+    },
+    {
+      "name": "FOSTER Lyle",
+      "position": "FW"
+    },
+    {
+      "name": "MOFOKENG Relebohile",
+      "position": "FW"
+    },
+    {
+      "name": "ZWANE Themba",
+      "position": "MF"
+    },
+    {
+      "name": "MASEKO Thapelo",
+      "position": "FW"
+    },
+    {
+      "name": "SITHOLE Sphephelo",
+      "position": "MF"
+    },
+    {
+      "name": "MBOKAZI Mbekezeli",
+      "position": "DF"
+    },
+    {
+      "name": "RAYNERS Iqraam",
+      "position": "FW"
+    },
+    {
+      "name": "CHAINE Sipho",
+      "position": "GK"
+    },
+    {
+      "name": "MAKGOPA Evidence",
+      "position": "FW"
+    },
+    {
+      "name": "KABINI Samukele",
+      "position": "DF"
+    },
+    {
+      "name": "SIBISI Nkosinathi",
+      "position": "DF"
+    },
+    {
+      "name": "MUDAU Khuliso",
+      "position": "DF"
+    },
+    {
+      "name": "OKON Ime",
+      "position": "DF"
+    },
+    {
+      "name": "GOSS Ricardo",
+      "position": "GK"
+    },
+    {
+      "name": "ADAMS Jayden",
+      "position": "MF"
+    },
+    {
+      "name": "MAKHANYA Olwethu",
+      "position": "DF"
+    },
+    {
+      "name": "SEBELEBELE Kamogelo",
+      "position": "FW"
+    },
+    {
+      "name": "CROSS Bradley",
+      "position": "DF"
+    }
+  ],
+  "Spain 2026": [
+    {
+      "name": "RAYA David",
+      "position": "GK"
+    },
+    {
+      "name": "PUBILL Marc",
+      "position": "DF"
+    },
+    {
+      "name": "GRIMALDO Alex",
+      "position": "DF"
+    },
+    {
+      "name": "GARCIA Eric",
+      "position": "DF"
+    },
+    {
+      "name": "LLORENTE Marcos",
+      "position": "DF"
+    },
+    {
+      "name": "MERINO Mikel",
+      "position": "MF"
+    },
+    {
+      "name": "TORRES Ferran",
+      "position": "FW"
+    },
+    {
+      "name": "RUIZ Fabian",
+      "position": "MF"
+    },
+    {
+      "name": "GAVI",
+      "position": "MF"
+    },
+    {
+      "name": "OLMO Dani",
+      "position": "FW"
+    },
+    {
+      "name": "PINO Yeremy",
+      "position": "FW"
+    },
+    {
+      "name": "PORRO Pedro",
+      "position": "DF"
+    },
+    {
+      "name": "GARCIA Joan",
+      "position": "GK"
+    },
+    {
+      "name": "LAPORTE Aymeric",
+      "position": "DF"
+    },
+    {
+      "name": "BAENA Alex",
+      "position": "MF"
+    },
+    {
+      "name": "RODRI",
+      "position": "MF"
+    },
+    {
+      "name": "WILLIAMS Nico",
+      "position": "FW"
+    },
+    {
+      "name": "ZUBIMENDI Martin",
+      "position": "MF"
+    },
+    {
+      "name": "YAMAL Lamine",
+      "position": "FW"
+    },
+    {
+      "name": "PEDRI",
+      "position": "MF"
+    },
+    {
+      "name": "OYARZABAL Mikel",
+      "position": "FW"
+    },
+    {
+      "name": "CUBARSI Pau",
+      "position": "DF"
+    },
+    {
+      "name": "SIMON Unai",
+      "position": "GK"
+    },
+    {
+      "name": "CUCURELLA Marc",
+      "position": "DF"
+    },
+    {
+      "name": "MUNOZ Victor",
+      "position": "FW"
+    },
+    {
+      "name": "IGLESIAS Borja",
+      "position": "FW"
+    }
+  ],
+  "Sweden 2026": [
+    {
+      "name": "WIDELL ZETTERSTROM Jacob",
+      "position": "GK"
+    },
+    {
+      "name": "LAGERBIELKE Gustaf",
+      "position": "DF"
+    },
+    {
+      "name": "LINDELOF Victor",
+      "position": "DF"
+    },
+    {
+      "name": "HIEN Isak",
+      "position": "DF"
+    },
+    {
+      "name": "GUDMUNDSSON Gabriel",
+      "position": "DF"
+    },
+    {
+      "name": "JOHANSSON Herman",
+      "position": "DF"
+    },
+    {
+      "name": "BERGVALL Lucas",
+      "position": "MF"
+    },
+    {
+      "name": "SVENSSON Daniel",
+      "position": "DF"
+    },
+    {
+      "name": "ISAK Alexander",
+      "position": "FW"
+    },
+    {
+      "name": "NYGREN Benjamin",
+      "position": "MF"
+    },
+    {
+      "name": "ELANGA Anthony",
+      "position": "FW"
+    },
+    {
+      "name": "JOHANSSON Viktor",
+      "position": "GK"
+    },
+    {
+      "name": "SEMA Ken",
+      "position": "MF"
+    },
+    {
+      "name": "EKDAL Hjalmar",
+      "position": "DF"
+    },
+    {
+      "name": "STARFELT Carl",
+      "position": "DF"
+    },
+    {
+      "name": "KARLSTROM Jesper",
+      "position": "MF"
+    },
+    {
+      "name": "GYOKERES Viktor",
+      "position": "FW"
+    },
+    {
+      "name": "AYARI Yasin",
+      "position": "MF"
+    },
+    {
+      "name": "SVANBERG Mattias",
+      "position": "MF"
+    },
+    {
+      "name": "SMITH Eric",
+      "position": "DF"
+    },
+    {
+      "name": "BERNHARDSSON Alexander",
+      "position": "DF"
+    },
+    {
+      "name": "ZENELI Besfort",
+      "position": "MF"
+    },
+    {
+      "name": "NORDFELDT Kristoffer",
+      "position": "GK"
+    },
+    {
+      "name": "STROUD Elliot",
+      "position": "DF"
+    },
+    {
+      "name": "NILSSON Gustaf",
+      "position": "FW"
+    },
+    {
+      "name": "ALI Taha",
+      "position": "FW"
+    }
+  ],
+  "Switzerland 2026": [
+    {
+      "name": "KOBEL Gregor",
+      "position": "GK"
+    },
+    {
+      "name": "MUHEIM Miro",
+      "position": "DF"
+    },
+    {
+      "name": "WIDMER Silvan",
+      "position": "DF"
+    },
+    {
+      "name": "ELVEDI Nico",
+      "position": "DF"
+    },
+    {
+      "name": "AKANJI Manuel",
+      "position": "DF"
+    },
+    {
+      "name": "ZAKARIA Denis",
+      "position": "MF"
+    },
+    {
+      "name": "EMBOLO Breel",
+      "position": "FW"
+    },
+    {
+      "name": "FREULER Remo",
+      "position": "MF"
+    },
+    {
+      "name": "MANZAMBI Johan",
+      "position": "MF"
+    },
+    {
+      "name": "XHAKA Granit",
+      "position": "MF"
+    },
+    {
+      "name": "NDOYE Dan",
+      "position": "FW"
+    },
+    {
+      "name": "MVOGO Yvon",
+      "position": "GK"
+    },
+    {
+      "name": "RODRIGUEZ Ricardo",
+      "position": "DF"
+    },
+    {
+      "name": "JASHARI Ardon",
+      "position": "MF"
+    },
+    {
+      "name": "SOW Djibril",
+      "position": "MF"
+    },
+    {
+      "name": "FASSNACHT Christian",
+      "position": "FW"
+    },
+    {
+      "name": "VARGAS Ruben",
+      "position": "FW"
+    },
+    {
+      "name": "COEMERT Eray",
+      "position": "DF"
+    },
+    {
+      "name": "OKAFOR Noah",
+      "position": "FW"
+    },
+    {
+      "name": "AEBISCHER Michel",
+      "position": "MF"
+    },
+    {
+      "name": "KELLER Marvin",
+      "position": "GK"
+    },
+    {
+      "name": "RIEDER Fabian",
+      "position": "MF"
+    },
+    {
+      "name": "AMDOUNI Zeki",
+      "position": "FW"
+    },
+    {
+      "name": "AMENDA Aurele",
+      "position": "DF"
+    },
+    {
+      "name": "JAQUEZ Luca",
+      "position": "DF"
+    },
+    {
+      "name": "ITTEN Cedric",
+      "position": "FW"
+    }
+  ],
+  "Tunisia 2026": [
+    {
+      "name": "CHAMAKH Mouhib",
+      "position": "GK"
+    },
+    {
+      "name": "ABDI Ali",
+      "position": "DF"
+    },
+    {
+      "name": "TALBI Montassar",
+      "position": "DF"
+    },
+    {
+      "name": "REKIK Omar",
+      "position": "DF"
+    },
+    {
+      "name": "AROUS Adam",
+      "position": "DF"
+    },
+    {
+      "name": "BRONN Dylan",
+      "position": "DF"
+    },
+    {
+      "name": "ACHOURI Elias",
+      "position": "FW"
+    },
+    {
+      "name": "SAAD Elias",
+      "position": "FW"
+    },
+    {
+      "name": "MASTOURI Hazem",
+      "position": "FW"
+    },
+    {
+      "name": "MEJBRI Hannibal",
+      "position": "MF"
+    },
+    {
+      "name": "GHARBI Ismael",
+      "position": "MF"
+    },
+    {
+      "name": "BEN OUANES Mortadha",
+      "position": "DF"
+    },
+    {
+      "name": "KHEDIRA Rani",
+      "position": "MF"
+    },
+    {
+      "name": "AYARI Khalil",
+      "position": "MF"
+    },
+    {
+      "name": "HADJ MAHMOUD Mohamed",
+      "position": "MF"
+    },
+    {
+      "name": "DAHMEN Aymen",
+      "position": "GK"
+    },
+    {
+      "name": "SKHIRI Ellyes",
+      "position": "MF"
+    },
+    {
+      "name": "ELLOUMI Rayan",
+      "position": "FW"
+    },
+    {
+      "name": "CHAOUAT Firas",
+      "position": "FW"
+    },
+    {
+      "name": "VALERY Yan",
+      "position": "DF"
+    },
+    {
+      "name": "BEN HMIDA Mohamed Amine",
+      "position": "DF"
+    },
+    {
+      "name": "BEN HESSEN Sabri",
+      "position": "GK"
+    },
+    {
+      "name": "NEFFATI Moutaz",
+      "position": "DF"
+    },
+    {
+      "name": "CHIKHAOUI Raed",
+      "position": "DF"
+    },
+    {
+      "name": "SLIMANE Anis",
+      "position": "MF"
+    },
+    {
+      "name": "TOUNEKTI Sebastian",
+      "position": "MF"
+    }
+  ],
+  "Türkiye 2026": [
+    {
+      "name": "GUNOK Mert",
+      "position": "GK"
+    },
+    {
+      "name": "CELIK Zeki",
+      "position": "DF"
+    },
+    {
+      "name": "DEMIRAL Merih",
+      "position": "DF"
+    },
+    {
+      "name": "SOYUNCU Caglar",
+      "position": "DF"
+    },
+    {
+      "name": "OZCAN Salih",
+      "position": "MF"
+    },
+    {
+      "name": "KOKCU Orkun",
+      "position": "MF"
+    },
+    {
+      "name": "AKTURKOGLU Kerem",
+      "position": "FW"
+    },
+    {
+      "name": "GULER Arda",
+      "position": "FW"
+    },
+    {
+      "name": "GUL Deniz",
+      "position": "FW"
+    },
+    {
+      "name": "CALHANOGLU Hakan",
+      "position": "MF"
+    },
+    {
+      "name": "YILDIZ Kenan",
+      "position": "FW"
+    },
+    {
+      "name": "BAYINDIR Altay",
+      "position": "GK"
+    },
+    {
+      "name": "ELMALI Eren",
+      "position": "DF"
+    },
+    {
+      "name": "BARDAKCI Abdulkerim",
+      "position": "DF"
+    },
+    {
+      "name": "KABAK Ozan",
+      "position": "DF"
+    },
+    {
+      "name": "YUKSEK Ismail",
+      "position": "MF"
+    },
+    {
+      "name": "KAHVECI Irfan Can",
+      "position": "FW"
+    },
+    {
+      "name": "MULDUR Mert",
+      "position": "DF"
+    },
+    {
+      "name": "AKGUN Yunus",
+      "position": "FW"
+    },
+    {
+      "name": "KADIOGLU Ferdi",
+      "position": "DF"
+    },
+    {
+      "name": "YILMAZ Baris Alper",
+      "position": "FW"
+    },
+    {
+      "name": "AYHAN Kaan",
+      "position": "MF"
+    },
+    {
+      "name": "CAKIR Ugurcan",
+      "position": "GK"
+    },
+    {
+      "name": "AYDIN Oguz",
+      "position": "FW"
+    },
+    {
+      "name": "AKAYDIN Samet",
+      "position": "DF"
+    },
+    {
+      "name": "UZUN Can",
+      "position": "FW"
+    }
+  ],
+  "Uruguay 2026": [
+    {
+      "name": "ROCHET Sergio",
+      "position": "GK"
+    },
+    {
+      "name": "GIMENEZ Jose Maria",
+      "position": "DF"
+    },
+    {
+      "name": "CACERES Sebastian",
+      "position": "DF"
+    },
+    {
+      "name": "ARAUJO Ronald",
+      "position": "DF"
+    },
+    {
+      "name": "UGARTE Manuel",
+      "position": "MF"
+    },
+    {
+      "name": "BENTANCUR Rodrigo",
+      "position": "MF"
+    },
+    {
+      "name": "DE LA CRUZ Nicolas",
+      "position": "MF"
+    },
+    {
+      "name": "VALVERDE Federico",
+      "position": "MF"
+    },
+    {
+      "name": "NUNEZ Darwin",
+      "position": "FW"
+    },
+    {
+      "name": "DE ARRASCAETA Giorgian",
+      "position": "MF"
+    },
+    {
+      "name": "PELLISTRI Facundo",
+      "position": "FW"
+    },
+    {
+      "name": "MELE Santiago",
+      "position": "GK"
+    },
+    {
+      "name": "VARELA Guillermo",
+      "position": "DF"
+    },
+    {
+      "name": "CANOBBIO Agustin",
+      "position": "MF"
+    },
+    {
+      "name": "MARTINEZ Emiliano",
+      "position": "MF"
+    },
+    {
+      "name": "OLIVERA Mathias",
+      "position": "DF"
+    },
+    {
+      "name": "VINA Matias",
+      "position": "DF"
+    },
+    {
+      "name": "RODRIGUEZ Brian",
+      "position": "FW"
+    },
+    {
+      "name": "AGUIRRE Rodrigo",
+      "position": "FW"
+    },
+    {
+      "name": "ARAUJO Maxi",
+      "position": "MF"
+    },
+    {
+      "name": "VINAS Federico",
+      "position": "FW"
+    },
+    {
+      "name": "PIQUEREZ Joaquin",
+      "position": "MF"
+    },
+    {
+      "name": "MUSLERA Fernando",
+      "position": "GK"
+    },
+    {
+      "name": "BUENO Santiago",
+      "position": "DF"
+    },
+    {
+      "name": "SANABRIA Juan Manuel",
+      "position": "MF"
+    },
+    {
+      "name": "ZALAZAR Rodrigo",
+      "position": "MF"
+    }
+  ],
+  "USA 2026": [
+    {
+      "name": "TURNER Matt",
+      "position": "GK"
+    },
+    {
+      "name": "DEST Sergino",
+      "position": "DF"
+    },
+    {
+      "name": "RICHARDS Chris",
+      "position": "DF"
+    },
+    {
+      "name": "ADAMS Tyler",
+      "position": "MF"
+    },
+    {
+      "name": "ROBINSON Antonee",
+      "position": "DF"
+    },
+    {
+      "name": "TRUSTY Auston",
+      "position": "DF"
+    },
+    {
+      "name": "REYNA Giovanni",
+      "position": "MF"
+    },
+    {
+      "name": "McKENNIE Weston",
+      "position": "MF"
+    },
+    {
+      "name": "PEPI Ricardo",
+      "position": "FW"
+    },
+    {
+      "name": "PULISIC Christian",
+      "position": "FW"
+    },
+    {
+      "name": "AARONSON Brenden",
+      "position": "FW"
+    },
+    {
+      "name": "ROBINSON Miles",
+      "position": "DF"
+    },
+    {
+      "name": "REAM Tim",
+      "position": "DF"
+    },
+    {
+      "name": "BERHALTER Sebastian",
+      "position": "MF"
+    },
+    {
+      "name": "ROLDAN Cristian",
+      "position": "MF"
+    },
+    {
+      "name": "FREEMAN Alex",
+      "position": "DF"
+    },
+    {
+      "name": "TILLMAN Malik",
+      "position": "MF"
+    },
+    {
+      "name": "ARFSTEN Max",
+      "position": "DF"
+    },
+    {
+      "name": "WRIGHT Haji",
+      "position": "FW"
+    },
+    {
+      "name": "BALOGUN Folarin",
+      "position": "FW"
+    },
+    {
+      "name": "WEAH Timothy",
+      "position": "FW"
+    },
+    {
+      "name": "McKENZIE Mark",
+      "position": "DF"
+    },
+    {
+      "name": "SCALLY Joe",
+      "position": "DF"
+    },
+    {
+      "name": "FREESE Matt",
+      "position": "GK"
+    },
+    {
+      "name": "BRADY Chris",
+      "position": "GK"
+    },
+    {
+      "name": "ZENDEJAS Alex",
+      "position": "FW"
+    }
+  ],
+  "Uzbekistan 2026": [
+    {
+      "name": "YUSUPOV Utkir",
+      "position": "GK"
+    },
+    {
+      "name": "KHUSANOV Abdukodir",
+      "position": "DF"
+    },
+    {
+      "name": "ALIJONOV Khojiakbar",
+      "position": "DF"
+    },
+    {
+      "name": "SAYFIEV Farrukh",
+      "position": "DF"
+    },
+    {
+      "name": "ASHURMATOV Rustam",
+      "position": "DF"
+    },
+    {
+      "name": "MOZGOVOY Akmal",
+      "position": "MF"
+    },
+    {
+      "name": "SHUKUROV Otabek",
+      "position": "MF"
+    },
+    {
+      "name": "ISKANDEROV Jamshid",
+      "position": "MF"
+    },
+    {
+      "name": "XAMROBEKOV Odiljon",
+      "position": "MF"
+    },
+    {
+      "name": "MASHARIPOV Jaloliddin",
+      "position": "MF"
+    },
+    {
+      "name": "URUNOV Oston",
+      "position": "MF"
+    },
+    {
+      "name": "NEMATOV Abduvohid",
+      "position": "GK"
+    },
+    {
+      "name": "NASRULLAEV Sherzod",
+      "position": "DF"
+    },
+    {
+      "name": "SHOMURODOV Eldor",
+      "position": "FW"
+    },
+    {
+      "name": "ESHMURODOV Umar",
+      "position": "DF"
+    },
+    {
+      "name": "ERGASHEV Botirali",
+      "position": "GK"
+    },
+    {
+      "name": "KHAMDAMOV Dostonbek",
+      "position": "MF"
+    },
+    {
+      "name": "ABDULLAEV Abdulla",
+      "position": "DF"
+    },
+    {
+      "name": "GANIEV Azizjon",
+      "position": "MF"
+    },
+    {
+      "name": "AMONOV Azizbek",
+      "position": "FW"
+    },
+    {
+      "name": "SERGEEV Igor",
+      "position": "FW"
+    },
+    {
+      "name": "FAYZULLAEV Abbosbek",
+      "position": "MF"
+    },
+    {
+      "name": "ESANOV Sherzod",
+      "position": "MF"
+    },
+    {
+      "name": "KARIMOV Behruzjon",
+      "position": "DF"
+    },
+    {
+      "name": "ULMASALIYEV Avazbek",
+      "position": "DF"
+    },
+    {
+      "name": "UROZOV Jakhongir",
+      "position": "DF"
+    }
+  ]
+}
